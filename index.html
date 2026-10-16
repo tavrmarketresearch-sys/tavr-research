@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0284c7">
+  <meta name="description" content="Mobile-friendly, modern research article portal for Transcatheter Aortic Valve Replacement (TAVR) clinical trials and market intelligence.">
+  <title>TAVR Research Hub | Clinical Trials & Market Intelligence</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-brand" id="logoBrand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="logo-icon-wrapper" aria-hidden="true">
+          <!-- Cardiology Heart / Valve Waveform SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            <polyline points="7 12 10 12 11 9 13 15 14 12 17 12"></polyline>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="brand-title">TAVR Research</span>
+          <span class="brand-subtitle">Clinical & Market Hub</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Bookmark Filter Toggle -->
+        <button class="icon-btn" id="bookmarksFilterBtn" title="Show Bookmarked Articles" aria-label="Bookmarked Articles">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="badge-counter" id="bookmarksCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button class="icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Add Article Button -->
+        <button class="btn-primary-action" id="addArticleBtn" aria-label="Add Research Article">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Add Article</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Search Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>Evidence-Based Cardiovascular Insights</span>
+      </div>
+      <h1 class="hero-title">Transcatheter Heart Valve <span>Research Portal</span></h1>
+      <p class="hero-desc">Explore landmark clinical trials, hemodynamic outcomes, device comparisons, and health-economic forecasts in TAVR.</p>
+    </div>
+
+    <!-- Live Search Input -->
+    <div class="search-wrapper">
+      <div class="search-input-group">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Search articles by title, author, keyword, or trial name... (Press '/' to focus)" 
+          autocomplete="off"
+          aria-label="Search research articles"
+        >
+        <button class="search-clear-btn" id="searchClearBtn" title="Clear search" aria-label="Clear search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Controls Section -->
+  <section class="filter-section">
+    <!-- Category Chips Scrollbar -->
+    <div class="category-scroll-container" id="categoryChipsContainer">
+      <button class="filter-chip active" data-category="all">All Topics</button>
+      <button class="filter-chip" data-category="Clinical Trials">Clinical Trials</button>
+      <button class="filter-chip" data-category="Durability & Outcomes">Durability & Outcomes</button>
+      <button class="filter-chip" data-category="Market Trends">Market Trends</button>
+      <button class="filter-chip" data-category="Device Comparison">Device Comparison</button>
+      <button class="filter-chip" data-category="Complications & Safety">Complications & Safety</button>
+    </div>
+
+    <!-- Secondary Meta Controls -->
+    <div class="controls-bar">
+      <div class="results-count" id="resultsCount">Loading articles...</div>
+      
+      <div class="sort-and-view">
+        <label for="sortSelect" class="sort-label">Sort by:</label>
+        <select id="sortSelect" class="sort-select" aria-label="Sort articles">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="citations">Most Cited</option>
+          <option value="title">Alphabetical (A-Z)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content: Articles Grid -->
+  <main class="main-content">
+    <div class="articles-grid" id="articlesGrid">
+      <!-- Article Cards will be dynamically inserted here -->
+    </div>
+
+    <!-- Empty State Container -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+      <h3 class="empty-title">No matching research articles</h3>
+      <p class="empty-text">Try adjusting your search terms or clearing your category filters.</p>
+      <button class="btn-primary-action" id="resetFilterBtn">Reset All Filters</button>
+    </div>
+  </main>
+
+  <!-- Article Reader Modal / Slide-over Drawer -->
+  <div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-sheet" id="modalSheet">
+      <div class="sheet-drag-pill" aria-hidden="true"></div>
+      
+      <!-- Modal Navigation Header -->
+      <div class="modal-header">
+        <div class="modal-reader-tools">
+          <button class="tool-btn" id="fontSizeDownBtn" title="Decrease font size" aria-label="Decrease font size">A-</button>
+          <button class="tool-btn" id="fontSizeUpBtn" title="Increase font size" aria-label="Increase font size">A+</button>
+          <button class="tool-btn" id="copyCitationBtn" title="Copy APA Citation" aria-label="Copy citation">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy Citation</span>
+          </button>
+        </div>
+
+        <button class="modal-close-btn" id="modalCloseBtn" title="Close reader" aria-label="Close reader">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="modal-body">
+        <div class="modal-category-row">
+          <span class="badge-tag" id="modalCategory">Category</span>
+          <span class="badge-tag" id="modalBadge" style="background: var(--bg-surface-secondary); color: var(--text-muted);">Badge</span>
+        </div>
+
+        <h1 class="modal-title" id="modalTitle">Article Title</h1>
+
+        <div class="modal-meta-grid">
+          <div><span class="meta-row-label">Journal: </span><span class="meta-row-val" id="modalJournal">-</span></div>
+          <div><span class="meta-row-label">Published: </span><span class="meta-row-val" id="modalDate">-</span></div>
+          <div><span class="meta-row-label">Estimated Read: </span><span class="meta-row-val" id="modalReadTime">-</span></div>
+          <div><span class="meta-row-label">Impact Metric: </span><span class="meta-row-val" id="modalCitations">-</span></div>
+          <div style="grid-column: 1 / -1;"><span class="meta-row-label">Authors: </span><span class="meta-row-val" id="modalAuthors">-</span></div>
+          <div style="grid-column: 1 / -1;">
+            <span class="meta-row-label">DOI: </span>
+            <a href="#" id="modalDoi" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">-</a>
+          </div>
+        </div>
+
+        <!-- Abstract -->
+        <div class="modal-section">
+          <h2 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            Abstract & Summary
+          </h2>
+          <p class="modal-paragraph" id="modalAbstract"></p>
+        </div>
+
+        <!-- Key Findings -->
+        <div class="modal-section">
+          <h2 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            Key Clinical & Technical Findings
+          </h2>
+          <ul class="findings-list" id="modalFindings"></ul>
+        </div>
+
+        <!-- Market & Clinical Implications -->
+        <div class="modal-section">
+          <h2 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            Market & Healthcare Implications
+          </h2>
+          <div class="implications-box">
+            <p id="modalImplications"></p>
+          </div>
+        </div>
+
+        <!-- Methodology -->
+        <div class="modal-section">
+          <h2 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Study Methodology & Dataset
+          </h2>
+          <p class="modal-paragraph" id="modalMethodology"></p>
+        </div>
+
+        <!-- Tags -->
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button class="tool-btn" id="modalBookmarkBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Save to Bookmarks</span>
+        </button>
+        <button class="btn-primary-action" onclick="document.getElementById('modalCloseBtn').click()">Done Reading</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Article Modal Form -->
+  <div class="modal-backdrop" id="addArticleModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
+    <div class="modal-sheet" style="max-width: 640px;">
+      <div class="modal-header">
+        <h3 id="addModalTitle" style="font-size: 1.15rem; font-weight: 700;">Add Research Publication</h3>
+        <button class="modal-close-btn" id="closeAddModalBtn" aria-label="Close dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form id="addArticleForm">
+        <div class="modal-body" style="padding: 1.5rem;">
+          <div class="form-group">
+            <label class="form-label" for="articleTitle">Paper Title *</label>
+            <input type="text" id="articleTitle" name="articleTitle" class="form-input" placeholder="e.g. 5-Year Outcomes of Novel Transcatheter Valves" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="articleCategory">Category</label>
+              <select id="articleCategory" name="articleCategory" class="form-select">
+                <option value="Clinical Trials">Clinical Trials</option>
+                <option value="Durability & Outcomes">Durability & Outcomes</option>
+                <option value="Market Trends">Market Trends</option>
+                <option value="Device Comparison">Device Comparison</option>
+                <option value="Complications & Safety">Complications & Safety</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="articleJournal">Journal / Publication</label>
+              <input type="text" id="articleJournal" name="articleJournal" class="form-input" placeholder="e.g. JACC, NEJM, Circulation">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="articleAuthors">Authors (comma-separated)</label>
+            <input type="text" id="articleAuthors" name="articleAuthors" class="form-input" placeholder="e.g. Jane Doe, M.D., John Smith, Ph.D.">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="articleAbstract">Abstract & Summary *</label>
+            <textarea id="articleAbstract" name="articleAbstract" class="form-textarea" rows="3" placeholder="Summary of clinical background, objectives, and findings..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="articleFindings">Key Clinical Findings (one per line)</label>
+            <textarea id="articleFindings" name="articleFindings" class="form-textarea" rows="3" placeholder="Key statistic 1&#10;Key outcome 2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="articleImplications">Market & Healthcare Implications</label>
+            <textarea id="articleImplications" name="articleImplications" class="form-textarea" rows="2" placeholder="Reimbursement, adoption impact, hospital economics..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="articleTags">Tags (comma-separated)</label>
+            <input type="text" id="articleTags" name="articleTags" class="form-input" placeholder="e.g. TAVR, Durability, Echo, Registry">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="tool-btn" onclick="document.getElementById('closeAddModalBtn').click()">Cancel</button>
+          <button type="submit" class="btn-primary-action">Publish Article</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastText">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div>
+        <strong>TAVR Research Hub</strong> &copy; 2024. Mobile-ready clinical & market research portal.
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/tavrmarketresearch-sys/tavr-research" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

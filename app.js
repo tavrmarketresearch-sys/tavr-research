@@ -369,14 +369,90 @@ function renderArticleProse(paragraphs) {
     ` : '';
 
     // Handle full article prose paragraphs if present in JSON
-    let articleProseHTML = '';
-    if (article.articleProse && Array.isArray(article.articleProse)) {
-articleProseHTML = renderArticleProse(article.articleProse);
-    } else if (article.clinicalRationale) {
-      articleProseHTML = `<p class="article-paragraph">${escapeHTML(article.clinicalRationale)}</p>`;
-    } else {
-      articleProseHTML = `<p class="article-paragraph">${escapeHTML(article.abstract)}</p>`;
+   function renderArticleProse(items) {
+  if (!Array.isArray(items)) return '';
+
+  let html = '';
+  let tableRows = [];
+
+  function flushTable() {
+    if (tableRows.length < 2) {
+      html += tableRows
+        .map(row => `<p class="article-paragraph">${escapeHTML(row)}</p>`)
+        .join('');
+      tableRows = [];
+      return;
     }
+
+    const parseRow = row =>
+      row.trim().replace(/^\|/, '').replace(/\|$/, '')
+        .split('|').map(cell => cell.trim());
+
+    const rows = tableRows.map(parseRow);
+    const hasSeparator = cells =>
+      cells.length > 0 && cells.every(cell => /^:?-{3,}:?$/.test(cell));
+
+    const separatorIndex = rows.findIndex(hasSeparator);
+
+    if (separatorIndex !== 1 || rows.length < 3) {
+      html += tableRows
+        .map(row => `<p class="article-paragraph">${escapeHTML(row)}</p>`)
+        .join('');
+      tableRows = [];
+      return;
+    }
+
+    const headers = rows[0];
+    const bodyRows = rows.slice(2);
+
+    html += `
+      <div class="article-table-wrapper">
+        <table class="article-table">
+          <thead><tr>
+            ${headers.map(cell => `<th>${escapeHTML(cell)}</th>`).join('')}
+          </tr></thead>
+          <tbody>
+            ${bodyRows.map(row => `
+              <tr>${headers.map((_, i) =>
+                `<td>${escapeHTML(row[i] || '')}</td>`
+              ).join('')}</tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    tableRows = [];
+  }
+
+  for (const item of items) {
+    const line = String(item ?? '').trim();
+
+    if (line.includes('|')) {
+      tableRows.push(line);
+    } else {
+      flushTable();
+      if (line) {
+        html += `<p class="article-paragraph">${escapeHTML(line)}</p>`;
+      }
+    }
+  }
+
+  flushTable();
+  return html;
+}
+
+let articleProseHTML = '';
+
+if (article.articleProse && Array.isArray(article.articleProse)) {
+  articleProseHTML = renderArticleProse(article.articleProse);
+} else if (article.clinicalRationale) {
+  articleProseHTML =
+    `<p class="article-paragraph">${escapeHTML(article.clinicalRationale)}</p>`;
+} else {
+  articleProseHTML =
+    `<p class="article-paragraph">${escapeHTML(article.abstract)}</p>`;
+}
 
     elements.articleContentWrapper.innerHTML = `
       <div class="full-article-header">

@@ -10,7 +10,7 @@
     "readTime": "28 min read",
     "badge": "Full Strategic Intelligence Report",
     "tags": ["Durability", "Evolut", "Sapien", "PARTNER 2A", "NOTION", "SMART", "PVL", "HALT"],
-    "citationsCount": 142,
+    "recentViewCount": 142,
     "abstract": "Two ten-year TAVR datasets published this year are being read as proof the durability question is settled. They say something narrower, and the read-across runs to Medtronic rather than Edwards.",
     "structuredAbstract": {
       "background": "Ten-year TAVR datasets published recently are often interpreted as proof that durability questions are settled. In reality, they address narrower propositions, with competitive implications favoring Medtronic Evolut over Edwards Sapien in constrained anatomies.",
@@ -256,7 +256,7 @@
     "readTime": "8 min read",
     "badge": "Landmark Trial",
     "tags": ["Low-Risk", "PARTNER 3", "Balloon-Expandable", "SAPIEN 3", "5-Year Durability"],
-    "citationsCount": 542,
+    "recentViewCount": 542,
     "abstract": "In low-risk surgical patients with severe symptomatic aortic stenosis, transcatheter aortic-valve replacement with a balloon-expandable valve achieved equivalent rates of death or disabling stroke at 5 years compared with surgical valve replacement, accompanied by durable hemodynamic indices and low rates of structural valve deterioration.",
     "structuredAbstract": {
       "background": "The PARTNER 3 trial previously demonstrated superior 1-year clinical outcomes for TAVR compared with surgery in low surgical risk patients. Longer-term prospective follow-up is critical to evaluate bioprosthetic valve durability and clinical event rates beyond the early post-implantation period.",
@@ -306,7 +306,7 @@
     "readTime": "7 min read",
     "badge": "Peer Reviewed",
     "tags": ["Self-Expanding", "Evolut", "Low-Risk", "Hemodynamics", "JACC 2023"],
-    "citationsCount": 389,
+    "recentViewCount": 389,
     "abstract": "Four-year follow-up from the randomized Evolut Low Risk trial demonstrates superior hemodynamic durability with self-expanding supra-annular TAVR compared with surgical bioprostheses, exhibiting statistically significantly lower transvalvular gradients and lower bioprosthetic valve dysfunction rates.",
     "structuredAbstract": {
       "background": "Self-expanding transcatheter aortic valves feature a supra-annular leaflet architecture designed to optimize hemodynamic orifice area. Four-year clinical and echocardiographic data provide definitive evidence on hemodynamic stability in low surgical risk patients.",
@@ -356,7 +356,7 @@
     "readTime": "6 min read",
     "badge": "Landmark Trial",
     "tags": ["PROTECTED TAVR", "Cerebral Protection", "Sentinel", "Stroke Prevention", "NEJM"],
-    "citationsCount": 412,
+    "recentViewCount": 412,
     "abstract": "The prospective, randomized PROTECTED TAVR trial assessed whether dual-filter cerebral embolic protection device (Sentinel) reduces peri-procedural stroke within 72 hours of transcatheter aortic valve replacement across 3,000 enrolled patients.",
     "structuredAbstract": {
       "background": "Periprocedural stroke is a feared complication of transcatheter valve delivery, predominantly driven by debris dislodged from calcified native leaflets and aortic walls. Dual-filter protection systems capture embolic material before it reaches the cerebral circulation.",
@@ -406,7 +406,7 @@
     "readTime": "7 min read",
     "badge": "Registry Study",
     "tags": ["Valve-in-Valve", "VIVID", "Failed Bioprosthesis", "BASILICA", "JAMA"],
-    "citationsCount": 476,
+    "recentViewCount": 476,
     "abstract": "The Valve-in-Valve International Data (VIVID) Registry provides definitive global multicenter outcomes of transcatheter aortic valve implantation (ViV) inside degenerated surgical bioprostheses, evaluating survival, hemodynamic gradients, coronary obstruction risks, and ring fracture techniques.",
     "structuredAbstract": {
       "background": "Bioprosthetic surgical aortic valves inevitably undergo structural deterioration 10 to 15 years post-implantation. Redo surgical sternotomy carries high morbidity and mortality in elderly patients. Transcatheter Valve-in-Valve represents a minimally invasive alternative.",
@@ -456,7 +456,7 @@
     "readTime": "6 min read",
     "badge": "Imaging Study",
     "tags": ["HALT", "4D-CT", "Leaflet Thrombosis", "Anticoagulation", "NEJM"],
-    "citationsCount": 512,
+    "recentViewCount": 512,
     "abstract": "Four-dimensional computed tomography surveillance revealed hypoattenuation affecting motion (HAM) and hypoattenuated leaflet thickening (HALT) in transcatheter and surgical bioprostheses, evaluating clinical consequences and resolution with therapeutic anticoagulation.",
     "structuredAbstract": {
       "background": "Reduced aortic valve leaflet motion due to subclinical thrombus formation was unexpectedly observed on high-resolution 4D-CT imaging in patients following bioprosthetic valve replacement, prompting widespread clinical evaluation of post-TAVR antithrombotic regimens.",
@@ -506,7 +506,7 @@
     "readTime": "7 min read",
     "badge": "Breakthrough Trial",
     "tags": ["TAVR UNLOAD", "Moderate AS", "Heart Failure", "HFrEF", "JACC"],
-    "citationsCount": 215,
+    "recentViewCount": 215,
     "abstract": "The international randomized TAVR UNLOAD trial investigates whether transcatheter unloading of the left ventricle in heart failure patients with reduced ejection fraction and moderate aortic stenosis improves cardiac remodeling and reduces heart failure rehospitalizations.",
     "structuredAbstract": {
       "background": "Moderate aortic stenosis imposes significant afterload on an already compromised, failing left ventricle. Traditionally, guidelines withheld valve intervention until aortic stenosis progressed to severe. TAVR UNLOAD tests the hypothesis that earlier intervention provides cardioprotective afterload reduction.",
@@ -556,7 +556,7 @@
     "readTime": "7 min read",
     "badge": "Comparative Registry",
     "tags": ["OPERA-TAVI", "SAPIEN vs Evolut", "Pacemaker", "Paravalvular Leak", "JACC"],
-    "citationsCount": 284,
+    "recentViewCount": 284,
     "abstract": "The OPERA-TAVI multicenter registry evaluates real-world comparative performance between contemporary balloon-expandable (SAPIEN 3 Ultra) and self-expanding (Evolut PRO/FX) platforms, defining optimal anatomical selection criteria.",
     "structuredAbstract": {
       "background": "Balloon-expandable and self-expanding transcatheter heart valves represent the two dominant technologies globally. Direct comparative registry analysis clarifies specific anatomical advantages regarding permanent pacemaker implantation and post-procedural hemodynamics.",

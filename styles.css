@@ -1384,3 +1384,86 @@ body.modal-open {
 .footer-links a:hover {
   color: var(--primary);
 }
+/* =========================================================
+   TAVR Research — Article Tables
+   Responsive, theme-aware clinical data presentation
+   ========================================================= */
+
+.article-prose .article-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.article-prose .article-data-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.article-prose .article-data-table th,
+.article-prose .article-data-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-wrap: anywhere;
+}
+
+.article-prose .article-data-table thead th {
+  background: var(--bg-surface-secondary);
+  color: var(--text-main);
+  font-weight: 750;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.article-prose .article-data-table tbody tr:nth-child(even) {
+  background: var(--bg-surface-secondary);
+}
+
+.article-prose .article-data-table tbody tr:hover {
+  background: var(--bg-surface-hover);
+}
+
+.article-prose .article-data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.article-prose .article-data-table th:first-child,
+.article-prose .article-data-table td:first-child {
+  font-weight: 600;
+}
+
+.article-prose .article-data-table a {
+  color: var(--primary-text);
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .article-prose .article-table-wrap {
+    margin: 1.1rem 0 1.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .article-prose .article-data-table {
+    min-width: 480px;
+    font-size: 0.82rem;
+  }
+
+  .article-prose .article-data-table th,
+  .article-prose .article-data-table td {
+    padding: 0.7rem 0.75rem;
+  }
+}

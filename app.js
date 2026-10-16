@@ -140,6 +140,93 @@
     }[tag] || tag));
   }
 
+function splitTableRow(line) {
+  return line.trim()
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map(cell => cell.trim());
+}
+
+function isTableSeparator(line) {
+  const cells = splitTableRow(line);
+  return cells.length > 0 &&
+    cells.every(cell => /^:?-{3,}:?$/.test(cell));
+}
+
+function renderArticleProse(paragraphs) {
+  const lines = paragraphs.flatMap(p =>
+    String(p).split('\n')
+  );
+
+  const output = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i].trim();
+    const next = (lines[i + 1] || '').trim();
+
+    // A Markdown table starts with a header and separator.
+    if (line.includes('|') && isTableSeparator(next)) {
+      const headers = splitTableRow(line);
+      const alignment = splitTableRow(next).map(cell => {
+        if (cell.startsWith(':') && cell.endsWith(':')) {
+          return 'center';
+        }
+        if (cell.endsWith(':')) return 'right';
+        return 'left';
+      });
+
+      i += 2;
+      const rows = [];
+
+      while (i < lines.length && lines[i].trim().includes('|')) {
+        rows.push(splitTableRow(lines[i]));
+        i++;
+      }
+
+      const renderCell = (cell, align, tag = 'td') =>
+        `<${tag} style="text-align:${align}">` +
+        `${escapeHTML(cell)}</${tag}>`;
+
+      output.push(`
+        <div class="article-table-wrap">
+          <table class="article-data-table">
+            <thead>
+              <tr>
+                ${headers.map((h, j) =>
+                  renderCell(h, alignment[j] || 'left', 'th')
+                ).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(row => `
+                <tr>
+                  ${headers.map((_, j) =>
+                    renderCell(row[j] || '', alignment[j] || 'left')
+                  ).join('')}
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `);
+
+      continue;
+    }
+
+    if (line) {
+      output.push(
+        `<p class="article-paragraph">${escapeHTML(line)}</p>`
+      );
+    }
+
+    i++;
+  }
+
+  return output.join('');
+}
+
   function updateBookmarkCounter() {
     if (!elements.bookmarksCountBadge) return;
     const count = state.bookmarks.size;
@@ -284,7 +371,7 @@
     // Handle full article prose paragraphs if present in JSON
     let articleProseHTML = '';
     if (article.articleProse && Array.isArray(article.articleProse)) {
-      articleProseHTML = article.articleProse.map(p => `<p class="article-paragraph">${escapeHTML(p)}</p>`).join('');
+articleProseHTML = renderArticleProse(article.articleProse);
     } else if (article.clinicalRationale) {
       articleProseHTML = `<p class="article-paragraph">${escapeHTML(article.clinicalRationale)}</p>`;
     } else {

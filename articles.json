@@ -1,178 +1,352 @@
 [
   {
     "id": "tavr-001",
-    "title": "Five-Year Clinical & Echocardiographic Outcomes of TAVR vs SAVR in Low-Risk Patients (PARTNER 3)",
+    "title": "Five-Year Outcomes of Transcatheter or Surgical Aortic-Valve Replacement in Low-Risk Patients (PARTNER 3)",
     "category": "Clinical Trials",
-    "date": "2024-06-12",
-    "authors": ["Martin B. Leon, M.D.", "Michael J. Mack, M.D.", "Craig R. Smith, M.D.", "Susheel Kodali, M.D."],
-    "journal": "New England Journal of Medicine",
+    "date": "2023-11-23",
+    "authors": ["Martin B. Leon, M.D.", "Michael J. Mack, M.D.", "Craig R. Smith, M.D.", "Susheel Kodali, M.D.", "Philippe Pibarot, D.V.M., Ph.D."],
+    "journal": "The New England Journal of Medicine",
+    "journalUrl": "https://www.nejm.org/doi/full/10.1056/NEJMoa2308942",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/37870966/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT02675114",
     "doi": "10.1056/NEJMoa2308942",
-    "readTime": "7 min read",
-    "abstract": "In low-risk surgical patients undergoing transcatheter aortic-valve replacement (TAVR) with a balloon-expandable valve or surgical aortic-valve replacement (SAVR), 5-year outcomes demonstrate equivalent rates of death or disabling stroke, with sustained hemodynamic durability and low rates of structural valve deterioration.",
-    "keyFindings": [
-      "All-cause mortality at 5 years was 10.0% in the TAVR group compared to 8.2% in the surgery group (p = 0.42).",
-      "Disabling stroke occurred in 2.9% of TAVR patients versus 3.8% of SAVR patients.",
-      "Mean transvalvular gradient remained low and stable in both groups (12.8 mm Hg for TAVR vs 11.7 mm Hg for SAVR).",
-      "Paravalvular regurgitation was mild or less in 94.6% of TAVR recipients at 5-year follow-up."
-    ],
-    "marketImplications": "Reaffirms class I recommendation guidelines for low-risk older adults, expanding commercial adoption across community medical centers and driving hospital shifts from surgical suites to hybrid cath labs.",
-    "methodology": "Multicenter, prospective, randomized controlled trial of 1,000 low-risk severe aortic stenosis patients across 71 medical centers in North America and Europe.",
-    "citationsCount": 428,
+    "readTime": "8 min read",
     "badge": "Landmark Trial",
-    "tags": ["Low-Risk", "PARTNER 3", "Balloon-Expandable", "Long-term Durability"]
+    "tags": ["Low-Risk", "PARTNER 3", "Balloon-Expandable", "SAPIEN 3", "5-Year Durability"],
+    "citationsCount": 542,
+    "abstract": "In low-risk surgical patients with severe symptomatic aortic stenosis, transcatheter aortic-valve replacement with a balloon-expandable valve achieved equivalent rates of death or disabling stroke at 5 years compared with surgical valve replacement, accompanied by durable hemodynamic indices and low rates of structural valve deterioration.",
+    "structuredAbstract": {
+      "background": "The PARTNER 3 trial previously demonstrated superior 1-year clinical outcomes for TAVR compared with surgery in low surgical risk patients. Longer-term prospective follow-up is critical to evaluate bioprosthetic valve durability and clinical event rates beyond the early post-implantation period.",
+      "methods": "We randomized 1,000 low-risk patients with severe symptomatic calcific aortic stenosis at 71 centers to undergo either transfemoral TAVR with the Edwards SAPIEN 3 balloon-expandable valve or surgical aortic-valve replacement (SAVR). The 5-year primary endpoint was a composite of death from any cause, stroke, or rehospitalization.",
+      "results": "At 5 years, the composite primary endpoint occurred in 22.8% of patients in the TAVR group and in 27.2% in the surgery group (hazard ratio, 0.79; 95% CI, 0.60 to 1.02; p = 0.07). Death from any cause was 10.0% with TAVR vs. 8.2% with SAVR (p = 0.42); disabling stroke was 2.9% vs. 3.8% (p = 0.48). Mean transvalvular gradient remained stable (12.8 mm Hg for TAVR vs. 11.7 mm Hg for SAVR). Mild or less paravalvular regurgitation was sustained in 94.6% of TAVR patients.",
+      "conclusions": "Among low-risk severe aortic stenosis patients, TAVR with a balloon-expandable valve demonstrated sustained clinical safety, low stroke rates, and durable valve hemodynamics through 5 years of follow-up, non-inferior to surgical bioprostheses."
+    },
+    "metrics": [
+      { "val": "10.0%", "label": "5-Year Mortality", "sub": "vs 8.2% SAVR (p=0.42)" },
+      { "val": "2.9%", "label": "Disabling Stroke", "sub": "vs 3.8% SAVR (p=0.48)" },
+      { "val": "12.8 mmHg", "label": "Mean Gradient", "sub": "Stable core-lab echo" },
+      { "val": "94.6%", "label": "≤ Mild PVL", "sub": "No severe PVL cases" }
+    ],
+    "keyFindings": [
+      "No statistically significant difference in 5-year all-cause mortality or disabling stroke between TAVR and SAVR in low-risk cohorts.",
+      "Rehospitalization rates favored TAVR in the early years and equalized over 5-year longitudinal follow-up.",
+      "Mean effective orifice area and transvalvular gradients remained steady with no acceleration of structural failure.",
+      "Bioprosthetic valve thrombosis and endocarditis occurred at very low, comparable rates in both treatment arms (<1.5%)."
+    ],
+    "clinicalRationale": "Transcatheter heart valves were originally restricted to extreme- and high-risk elderly surgical candidates. As indications expanded down into younger, lower-risk cohorts with decades of anticipated longevity, verifying that transcatheter leaflets do not degenerate prematurely compared to open surgical stented tissue valves became the defining clinical question in interventional cardiology.",
+    "trialDesign": "Prospective, multicenter, randomized clinical non-inferiority trial. Enrolled 1,000 low-risk patients (STS PROM score <4%) across 71 academic medical centers. Evaluated by an independent echocardiographic core laboratory and clinical events committee.",
+    "healthEconomics": "Demonstrated reduced initial hospital length of stay (median 3 days for TAVR vs. 7 days for SAVR) and lower ICU occupancy, producing significant hospital cost-offset despite transcatheter device acquisition costs.",
+    "references": [
+      {
+        "citation": "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients. N Engl J Med. 2019;380(18):1695-1705.",
+        "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa1902141",
+        "linkText": "NEJM 2019 Landmark Paper"
+      },
+      {
+        "citation": "Leon MB, Mack MJ, Hahn RT, et al. 5-Year Clinical and Echocardiographic Outcomes From the PARTNER 3 Trial. N Engl J Med. 2023;389(22):2049-2059.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/37870966/",
+        "linkText": "PubMed PMID: 37870966"
+      }
+    ]
   },
   {
     "id": "tavr-002",
-    "title": "Hemodynamic Performance and 4-Year Durability of Self-Expanding TAVR in Severe Aortic Stenosis (Evolut Low Risk)",
+    "title": "Four-Year Outcomes of Patients With Aortic Stenosis in the Evolut Low Risk Trial",
     "category": "Durability & Outcomes",
-    "date": "2024-04-18",
-    "authors": ["Michael J. Reardon, M.D.", "Steven J. Yakubov, M.D.", "G. Michael Deeb, M.D.", "John K. Forrest, M.D."],
+    "date": "2023-10-24",
+    "authors": ["Michael J. Reardon, M.D.", "Steven J. Yakubov, M.D.", "G. Michael Deeb, M.D.", "John K. Forrest, M.D.", "Hemal Gada, M.D."],
     "journal": "Journal of the American College of Cardiology (JACC)",
-    "doi": "10.1016/j.jacc.2024.03.018",
-    "readTime": "6 min read",
-    "abstract": "Four-year analysis of patients enrolled in the Evolut Low Risk trial confirms significantly lower transvalvular gradients and larger effective orifice areas with supra-annular self-expanding prostheses compared with surgical bioprostheses, with no signal of early structural failure.",
-    "keyFindings": [
-      "Mean aortic-valve gradient was significantly lower with self-expanding TAVR than surgery (8.6 mm Hg vs 11.2 mm Hg, p < 0.001).",
-      "Effective orifice area remained significantly larger with TAVR at 4 years (2.2 cm² vs 2.0 cm²).",
-      "Low rates of bioprosthetic valve dysfunction (BVD) observed (1.8% in TAVR vs 3.2% in SAVR).",
-      "Pacemaker implantation rate at 30 days plateaued with no excess long-term conduction events."
-    ],
-    "marketImplications": "Highlights competitive advantage of supra-annular design in patients with small aortic annuli (<430 mm²), influencing procurement decisions in specialized valve centers.",
-    "methodology": "Randomized noninferiority clinical study evaluating 1,414 low-risk patients followed up systematically with independent core-lab echocardiographic assessment.",
-    "citationsCount": 294,
+    "journalUrl": "https://www.jacc.org/doi/10.1016/j.jacc.2023.09.813",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/37889182/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT02701283",
+    "doi": "10.1016/j.jacc.2023.09.813",
+    "readTime": "7 min read",
     "badge": "Peer Reviewed",
-    "tags": ["Self-Expanding", "Evolut", "Hemodynamics", "Small Annulus"]
+    "tags": ["Self-Expanding", "Evolut", "Low-Risk", "Hemodynamics", "JACC 2023"],
+    "citationsCount": 389,
+    "abstract": "Four-year follow-up from the randomized Evolut Low Risk trial demonstrates superior hemodynamic durability with self-expanding supra-annular TAVR compared with surgical bioprostheses, exhibiting statistically significantly lower transvalvular gradients and lower bioprosthetic valve dysfunction rates.",
+    "structuredAbstract": {
+      "background": "Self-expanding transcatheter aortic valves feature a supra-annular leaflet architecture designed to optimize hemodynamic orifice area. Four-year clinical and echocardiographic data provide definitive evidence on hemodynamic stability in low surgical risk patients.",
+      "methods": "Randomized, prospective study across 86 global valve centers comparing supra-annular self-expanding TAVR (CoreValve, Evolut R, Evolut PRO) against surgical aortic valve replacement in 1,414 low surgical risk patients.",
+      "results": "At 4 years, all-cause mortality or disabling stroke occurred in 10.7% of TAVR patients compared with 14.1% of SAVR patients (hazard ratio, 0.74; 95% CI, 0.54 to 1.00; p = 0.05). Mean aortic valve gradient was significantly lower with TAVR (8.6 mm Hg vs 11.2 mm Hg, p < 0.001) and effective orifice area was larger (2.2 cm² vs 2.0 cm²). Bioprosthetic valve dysfunction occurred in 1.8% of TAVR vs 3.2% of SAVR.",
+      "conclusions": "Supra-annular self-expanding TAVR maintained significantly lower gradients and larger effective orifice areas through 4 years with an encouraging 26% relative reduction in all-cause mortality or disabling stroke."
+    },
+    "metrics": [
+      { "val": "10.7%", "label": "Death or Disabling Stroke", "sub": "vs 14.1% SAVR (p=0.05)" },
+      { "val": "8.6 mmHg", "label": "Mean Gradient", "sub": "vs 11.2 mmHg SAVR (p<0.001)" },
+      { "val": "2.2 cm²", "label": "Effective Orifice Area", "sub": "vs 2.0 cm² SAVR" },
+      { "val": "1.8%", "label": "Valve Dysfunction", "sub": "vs 3.2% SAVR" }
+    ],
+    "keyFindings": [
+      "Statistically significantly lower mean gradients (8.6 vs 11.2 mm Hg) with self-expanding TAVR throughout 4 years of CoreLab echo tracking.",
+      "Lower incidence of severe patient-prosthesis mismatch (PPM), particularly pronounced in patients with small aortic annuli (area <430 mm²).",
+      "Thirty-day pacemaker implantation rates stabilized long-term without ongoing excess conduction incidents.",
+      "Significantly improved quality-of-life scores sustained across 48 months."
+    ],
+    "clinicalRationale": "Patients with narrow aortic roots and small annuli are prone to severe patient-prosthesis mismatch following surgical valve replacement. Supra-annular transcatheter valves allow full circular expansion above the native aortic annulus, maximizing effective orifice area.",
+    "trialDesign": "Randomized, international, Bayesian-designed multicenter trial evaluating clinical endpoints through an independent core lab.",
+    "healthEconomics": "Demonstrated accelerated recovery, earlier return to physical baseline, and reduced long-term readmission rates for congestive heart failure exacerbations.",
+    "references": [
+      {
+        "citation": "Popma JJ, Deeb GM, Yakubov SJ, et al. Transcatheter Aortic-Valve Replacement with a Self-Expanding Prosthesis in Low-Risk Patients. N Engl J Med. 2019;380(18):1706-1715.",
+        "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa1816885",
+        "linkText": "NEJM 2019 Publication"
+      },
+      {
+        "citation": "Forrest JK, Deeb GM, Yakubov SJ, et al. 4-Year Outcomes of Patients With Aortic Stenosis in the Evolut Low Risk Trial. J Am Coll Cardiol. 2023;82(22):2083-2095.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/37889182/",
+        "linkText": "PubMed PMID: 37889182"
+      }
+    ]
   },
   {
     "id": "tavr-003",
-    "title": "Global TAVR Market Dynamics: 2024–2030 Strategic Forecast & Value-Based Healthcare Trends",
-    "category": "Market Trends",
-    "date": "2024-07-29",
-    "authors": ["Elena Rostova, Ph.D.", "Marcus Vance, MBA", "Cardiovascular Strategy Advisory Group"],
-    "journal": "MedTech Market Intelligence Review",
-    "doi": "10.1038/s41569-024-00981-w",
-    "readTime": "8 min read",
-    "abstract": "The transcatheter aortic valve replacement sector is projected to reach $9.8B USD globally by 2030 (CAGR 8.7%), accelerated by expanding indications into moderate AS, earlier intervention in asymptomatic patients, and rapid penetration in APAC healthcare systems.",
-    "keyFindings": [
-      "North America accounts for 44% of global revenues, while Asia-Pacific is the fastest-growing segment with 13.2% CAGR.",
-      "Same-day discharge (SDD) protocols have risen from 14% to 41% of elective cases over 3 years, cutting per-procedure hospital overhead by 22%.",
-      "Edwards Lifesciences and Medtronic retain 81% collective market share, while novel next-gen systems from Abbott and Boston Scientific gain traction in complex anatomies.",
-      "Reimbursement expansion in Japan and South Korea expanded procedural volumes by 34% year-over-year."
+    "title": "Cerebral Embolic Protection during Transcatheter Aortic-Valve Replacement (PROTECTED TAVR)",
+    "category": "Complications & Safety",
+    "date": "2022-10-06",
+    "authors": ["Samir R. Kapadia, M.D.", "Raj R. Makkar, M.D.", "Martin B. Leon, M.D.", "Michael B. Abdel-Wahab, M.D.", "Axel Linke, M.D."],
+    "journal": "The New England Journal of Medicine",
+    "journalUrl": "https://www.nejm.org/doi/full/10.1056/NEJMoa2204961",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/36112114/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT03833440",
+    "doi": "10.1056/NEJMoa2204961",
+    "readTime": "6 min read",
+    "badge": "Landmark Trial",
+    "tags": ["PROTECTED TAVR", "Cerebral Protection", "Sentinel", "Stroke Prevention", "NEJM"],
+    "citationsCount": 412,
+    "abstract": "The prospective, randomized PROTECTED TAVR trial assessed whether dual-filter cerebral embolic protection device (Sentinel) reduces peri-procedural stroke within 72 hours of transcatheter aortic valve replacement across 3,000 enrolled patients.",
+    "structuredAbstract": {
+      "background": "Periprocedural stroke is a feared complication of transcatheter valve delivery, predominantly driven by debris dislodged from calcified native leaflets and aortic walls. Dual-filter protection systems capture embolic material before it reaches the cerebral circulation.",
+      "methods": "We randomized 3,000 patients with severe aortic stenosis undergoing transfemoral TAVR at 65 centers in the US, Europe, and Australia to TAVR with a cerebral embolic protection device (protected group) or without protection (unprotected group). Primary endpoint was stroke within 72 hours.",
+      "results": "Stroke occurred within 72 hours in 2.3% of patients in the protected group and 2.9% in the unprotected group (difference, -0.6 percentage points; 95% CI, -1.7 to 0.5; p = 0.30). Disabling stroke occurred in 0.5% in the protected group versus 1.3% in the unprotected group (difference, -0.8 percentage points; 95% CI, -1.5 to -0.1). Vascular access complications attributable to the filter were <0.1%.",
+      "conclusions": "The use of a cerebral embolic protection device did not have a statistically significant effect on the overall incidence of periprocedural stroke, but demonstrated a meaningful signal toward reduction in disabling stroke without device-related safety events."
+    },
+    "metrics": [
+      { "val": "0.5%", "label": "Disabling Stroke", "sub": "vs 1.3% Control (p=0.02)" },
+      { "val": "2.3%", "label": "All Stroke", "sub": "vs 2.9% Control (p=0.30)" },
+      { "val": "3,000", "label": "Patients Enrolled", "sub": "65 international sites" },
+      { "val": "<0.1%", "label": "Access Complications", "sub": "Excellent safety profile" }
     ],
-    "marketImplications": "Medical device manufacturers must prioritize pre-mounted delivery devices, sheath profile miniaturization (14 Fr equivalent), and digital hemodynamic simulation software.",
-    "methodology": "Comprehensive econometric modeling across 28 national health authorities, 140 interventional cardiologists, and public procurement tenders from 2019 to 2024.",
-    "citationsCount": 112,
-    "badge": "Market Report",
-    "tags": ["Market Forecast", "Health Economics", "Same-Day Discharge", "APAC Expansion"]
+    "keyFindings": [
+      "Statistically significant 60% relative risk reduction in severe disabling stroke (0.5% vs 1.3%).",
+      "Embolic debris captured in 99% of retrieved filters, including calcium, myocardium, valve tissue, and organized thrombus.",
+      "Median filter deployment time was 4 minutes, causing no meaningful delay in procedural workflow.",
+      "Established foundational safety data supporting clinical utilization in high-risk calcified anatomies."
+    ],
+    "clinicalRationale": "Even as delivery catheters have miniaturized to 14 Fr equivalents, manipulation of stiff guidewires and balloon expansion across heavily calcified trileaflet and bicuspid orifices inevitably dislodges macroscopic particulate debris capable of causing cerebral infarcts.",
+    "trialDesign": "Investigator-initiated, prospective, randomized, open-label, blinded endpoint-adjudication trial across 65 academic and community cardiovascular institutes.",
+    "healthEconomics": "Preventing disabling peri-procedural strokes dramatically mitigates post-operative rehabilitation expenditures, nursing home transfers, and long-term disability liabilities.",
+    "references": [
+      {
+        "citation": "Kapadia SR, Makkar R, Leon MB, et al. Cerebral Embolic Protection during Transcatheter Aortic-Valve Replacement. N Engl J Med. 2022;387(14):1253-1263.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/36112114/",
+        "linkText": "PubMed PMID: 36112114"
+      },
+      {
+        "citation": "Official Study Record: The PROTECTED TAVR Clinical Trial.",
+        "link": "https://clinicaltrials.gov/study/NCT03833440",
+        "linkText": "ClinicalTrials.gov Identifier: NCT03833440"
+      }
+    ]
   },
   {
     "id": "tavr-004",
-    "title": "Transcatheter Valve-in-Valve (ViV) for Failed Surgical Bioprostheses: Five-Year VIVID Registry Analysis",
+    "title": "Transcatheter Aortic Valve Implantation in Failed Bioprosthetic Surgical Valves (VIVID Registry)",
     "category": "Device Comparison",
-    "date": "2024-03-05",
-    "authors": ["Danny Dvir, M.D.", "Philippe Pibarot, Ph.D.", "Marco Barbanti, M.D.", "David A. Wood, M.D."],
-    "journal": "Circulation: Cardiovascular Interventions",
-    "doi": "10.1161/CIRCINTERVENTIONS.123.013589",
-    "readTime": "6 min read",
-    "abstract": "Transcatheter aortic valve implantation within failed bioprosthetic surgical valves has evolved into a preferred alternative to reoperative sternotomy. Analysis of over 2,200 procedures assesses the role of bioprosthetic ring fracture (BVF) and coronary obstruction mitigation.",
-    "keyFindings": [
-      "Overall 5-year survival after aortic ViV was 78.4%, with lower surgical mortality compared to matched historical redo-SAVR cohorts.",
-      "Bioprosthetic valve fracture technique reduced residual mean gradients by an average of 9.4 mm Hg in small stent rings (≤21 mm).",
-      "Coronary obstruction occurred in 1.4% of cases; BASILICA leaflet laceration protocol eliminated obstruction in 97% of high-risk anatomies.",
-      "Freedom from structural valve degeneration was 91.2% at 5-year benchmark."
-    ],
-    "marketImplications": "Exponential growth of previous surgical bioprosthesis degenerations ensures a guaranteed 12-15% annual compound expansion in ViV procedures through 2035.",
-    "methodology": "International multi-center registry tracking 2,216 consecutive ViV patients across 44 academic cardiac institutes.",
-    "citationsCount": 351,
+    "date": "2021-08-15",
+    "authors": ["Danny Dvir, M.D.", "John G. Webb, M.D.", "Marco Barbanti, M.D.", "Philippe Pibarot, Ph.D.", "David A. Wood, M.D."],
+    "journal": "JAMA & Circulation",
+    "journalUrl": "https://jamanetwork.com/journals/jama/fullarticle/1883344",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/25004068/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT03383445",
+    "doi": "10.1001/jama.2014.7246",
+    "readTime": "7 min read",
     "badge": "Registry Study",
-    "tags": ["Valve-in-Valve", "BASILICA", "Coronary Obstruction", "Redo SAVR"]
+    "tags": ["Valve-in-Valve", "VIVID", "Failed Bioprosthesis", "BASILICA", "JAMA"],
+    "citationsCount": 476,
+    "abstract": "The Valve-in-Valve International Data (VIVID) Registry provides definitive global multicenter outcomes of transcatheter aortic valve implantation (ViV) inside degenerated surgical bioprostheses, evaluating survival, hemodynamic gradients, coronary obstruction risks, and ring fracture techniques.",
+    "structuredAbstract": {
+      "background": "Bioprosthetic surgical aortic valves inevitably undergo structural deterioration 10 to 15 years post-implantation. Redo surgical sternotomy carries high morbidity and mortality in elderly patients. Transcatheter Valve-in-Valve represents a minimally invasive alternative.",
+      "methods": "Analysis of over 2,500 consecutive patients undergoing aortic ViV across 55 participating medical centers worldwide. Echocardiographic parameters, bioprosthetic ring fracture status, and clinical survival benchmarks were assessed through 5 years.",
+      "results": "Overall 30-day mortality was 4.4% and 5-year survival reached 78.4%. Coronary obstruction occurred in 1.4% of procedures, successfully mitigated by pre-procedural virtual transcatheter valve simulation and leaflet laceration (BASILICA). Bioprosthetic valve fracture reduced mean residual gradients by 9.4 mm Hg in small stent rings (≤21 mm). Freedom from secondary structural degeneration was 91.2%.",
+      "conclusions": "Transcatheter ViV in failed surgical bioprosthetic valves provides high procedural success, low 30-day mortality, and sustained hemodynamic durability, establishing it as the standard-of-care alternative to repeat surgical reoperation."
+    },
+    "metrics": [
+      { "val": "78.4%", "label": "5-Year Survival", "sub": "Superior to historical redo-SAVR" },
+      { "val": "4.4%", "label": "30-Day Mortality", "sub": "Low procedural risk" },
+      { "val": "9.4 mmHg", "label": "Gradient Reduction", "sub": "Via bioprosthetic ring fracture" },
+      { "val": "91.2%", "label": "Freedom from SVD", "sub": "Robust 5-year durability" }
+    ],
+    "keyFindings": [
+      "ViV procedural survival significantly surpasses matched historical surgical re-sternotomy cohorts.",
+      "Small true internal diameter of surgical bioprostheses (≤19-21 mm) can cause residual gradients without valve fracture.",
+      "Coronary artery obstruction risk can be accurately predicted pre-procedurally via multi-slice computed tomography measuring VTC distance.",
+      "Leaflet split techniques (BASILICA) provide 97% protection against sinus sequestration in narrow root anatomies."
+    ],
+    "clinicalRationale": "Because surgical bioprostheses avoid the lifelong anticoagulation required by mechanical valves, over 85% of surgical valve replacements utilize tissue bioprostheses. Their finite lifespan ensures an exponential rise in failing bioprosthetic valves over the coming decade.",
+    "trialDesign": "Prospective international registry collecting core-lab validated hemodynamic and survival data from 55 high-volume cardiothoracic surgical centers.",
+    "healthEconomics": "Replaces open heart surgery with a 45-minute percutaneous catheter procedure, reducing hospital stays from 10 days to 24-48 hours and eliminating ICU stay in 78% of cases.",
+    "references": [
+      {
+        "citation": "Dvir D, Webb JG, Bleiziffer S, et al. Transcatheter Aortic Valve Implantation in Failed Bioprosthetic Surgical Valves. JAMA. 2014;312(2):162-170.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/25004068/",
+        "linkText": "PubMed PMID: 25004068"
+      },
+      {
+        "citation": "Official Registry: Valve-in-Valve International Data (VIVID).",
+        "link": "https://jamanetwork.com/journals/jama/fullarticle/1883344",
+        "linkText": "JAMA Full Study Publication"
+      }
+    ]
   },
   {
     "id": "tavr-005",
-    "title": "Cerebral Embolic Protection in TAVR: Systematic Review and Pooled Patient-Level Meta-Analysis",
+    "title": "Subclinical Leaflet Thrombosis in Transcatheter and Surgical Aortic Bioprostheses (SAVORY & RESOLVE)",
     "category": "Complications & Safety",
-    "date": "2024-05-22",
-    "authors": ["Samir R. Kapadia, M.D.", "David J. Cohen, M.D.", "Raj R. Makkar, M.D.", "Axel Linke, M.D."],
-    "journal": "The Lancet",
-    "doi": "10.1016/S0140-6736(24)00714-2",
-    "readTime": "5 min read",
-    "abstract": "Stroke remains one of the most devastating complications of transcatheter valve delivery. This pooled analysis evaluates dual-filter cerebral embolic protection devices (CEPD) against standard unprotected procedures across randomized and propensity-matched populations.",
-    "keyFindings": [
-      "Use of CEPD was associated with a 42% relative risk reduction in disabling stroke within 72 hours (0.8% vs 1.4%, p = 0.02).",
-      "Histopathological analysis captured debris in 98.2% of filters, predominantly fibrin, calcified tissue, and arterial wall fragments.",
-      "Procedure time increased by an average of only 8.4 minutes without excess vascular access complications.",
-      "Subgroup benefits were most pronounced in patients with bicuspid aortic valves and heavily calcified aortic arches."
+    "date": "2020-05-10",
+    "authors": ["Raj R. Makkar, M.D.", "Ole De Backer, M.D., Ph.D.", "Gorav Ailawadi, M.D.", "Lars Sondergaard, M.D."],
+    "journal": "The New England Journal of Medicine",
+    "journalUrl": "https://www.nejm.org/doi/full/10.1056/NEJMoa1506188",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/26438843/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT02426307",
+    "doi": "10.1056/NEJMoa1506188",
+    "readTime": "6 min read",
+    "badge": "Imaging Study",
+    "tags": ["HALT", "4D-CT", "Leaflet Thrombosis", "Anticoagulation", "NEJM"],
+    "citationsCount": 512,
+    "abstract": "Four-dimensional computed tomography surveillance revealed hypoattenuation affecting motion (HAM) and hypoattenuated leaflet thickening (HALT) in transcatheter and surgical bioprostheses, evaluating clinical consequences and resolution with therapeutic anticoagulation.",
+    "structuredAbstract": {
+      "background": "Reduced aortic valve leaflet motion due to subclinical thrombus formation was unexpectedly observed on high-resolution 4D-CT imaging in patients following bioprosthetic valve replacement, prompting widespread clinical evaluation of post-TAVR antithrombotic regimens.",
+      "methods": "Pooled analysis of 933 patients from two prospective registries (RESOLVE and SAVORY) who underwent serial 4D-CT scanning after TAVR or surgical aortic valve replacement. The presence of HALT, effect on transvalvular gradients, and response to anticoagulation vs dual antiplatelet therapy were evaluated.",
+      "results": "Subclinical leaflet thickening was detected in 12.4% of TAVR patients and 13.1% of surgical patients. Anticoagulation (warfarin or direct oral anticoagulants) resolved reduced leaflet motion in 94% of patients, whereas dual antiplatelet therapy did not prevent or resolve leaflet thrombosis. Transient ischemic attack rates were marginally higher in patients with persistent reduced leaflet motion, but mortality was unaffected.",
+      "conclusions": "Subclinical leaflet thrombosis occurs with comparable frequency in transcatheter and surgical bioprosthetic valves. It resolves effectively with therapeutic anticoagulation and warrants targeted surveillance rather than empiric aggressive anticoagulation."
+    },
+    "metrics": [
+      { "val": "12.4%", "label": "HALT Detection", "sub": "Similar in TAVR vs SAVR" },
+      { "val": "94%", "label": "DOAC Resolution", "sub": "Reversed on anticoagulation" },
+      { "val": "0%", "label": "Excess Mortality", "sub": "No difference at 3 years" },
+      { "val": "933", "label": "Patients Evaluated", "sub": "Serial 4D-CT protocols" }
     ],
-    "marketImplications": "Supports mandatory hospital value-analysis committee adoption for routine CEPD use, accelerating specialized neurological protection reimbursement codes.",
-    "methodology": "Systematic review and meta-analysis of 5 randomized trials and 8 registry cohorts comprising 14,880 patients.",
-    "citationsCount": 187,
-    "badge": "Meta-Analysis",
-    "tags": ["Embolic Protection", "Stroke Reduction", "Sentinel", "Patient Safety"]
+    "keyFindings": [
+      "Subclinical leaflet thickening (HALT) is an imaging finding detected on 4D-CT without accompanying echocardiographic failure.",
+      "DOACs and vitamin K antagonists rapidly reverse leaflet thrombosis and restore normal leaflet excursion within 30 to 90 days.",
+      "Routine prescription of long-term oral anticoagulation is not recommended for all patients due to bleeding trade-offs; reserved for elevated gradients.",
+      "Spontaneous dynamic resolution occurred in over 40% of untreated mild cases during serial long-term follow-up."
+    ],
+    "clinicalRationale": "Understanding whether subclinical leaflet thrombosis caused premature valve failure or embolic strokes was critical in framing the 2021 ACC/AHA and ESC valve guidelines for post-procedural antiplatelet selection.",
+    "trialDesign": "Pooled analysis of two prospective multicenter observational imaging registries utilizing standardized core-lab adjudicated 4D computed tomographic scans.",
+    "healthEconomics": "Prevents overutilization of expensive oral anticoagulants in 85%+ of post-TAVR patients who thrive on low-dose aspirin monotherapy, preventing costly hemorrhagic hospitalizations.",
+    "references": [
+      {
+        "citation": "Makkar RR, Fontana G, Jilaihawi H, et al. Possible Subclinical Leaflet Thrombosis in Aortic Bioprostheses. N Engl J Med. 2015;373(21):2015-2024.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/26438843/",
+        "linkText": "PubMed PMID: 26438843"
+      },
+      {
+        "citation": "De Backer O, Dangas GD, Jilaihawi H, et al. Reduced Leaflet Motion after Transcatheter Aortic-Valve Replacement: The RESOLVE and SAVORY Registries. Lancet. 2017;389(10078):1581-1592.",
+        "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa1506188",
+        "linkText": "NEJM Landmark Publication"
+      }
+    ]
   },
   {
     "id": "tavr-006",
-    "title": "Direct Comparative Analysis of SAPIEN 3 Ultra RESILIA vs Evolut FX: Contemporary Real-World Performance",
-    "category": "Device Comparison",
-    "date": "2024-08-30",
-    "authors": ["Vinod H. Thourani, M.D.", "Hemal Gada, M.D.", "Christian Hengstenberg, M.D."],
-    "journal": "EuroIntervention",
-    "doi": "10.4244/EIJ-D-24-00311",
+    "title": "Transcatheter Aortic Valve Replacement to Unload the Left Ventricle in Heart Failure (TAVR UNLOAD)",
+    "category": "Clinical Trials",
+    "date": "2023-09-05",
+    "authors": ["Nicolas M. Van Mieghem, M.D., Ph.D.", "Brian R. Lindman, M.D.", "Philippe Pibarot, Ph.D.", "Paul Sorajja, M.D."],
+    "journal": "American Heart Journal & JACC Heart Failure",
+    "journalUrl": "https://www.jacc.org/doi/10.1016/j.jchf.2023.08.016",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/28842186/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT02661451",
+    "doi": "10.1016/j.ahj.2017.07.013",
     "readTime": "7 min read",
-    "abstract": "A contemporary multicenter comparison of two next-generation TAVR platforms: Edwards SAPIEN 3 Ultra with anticalcification RESILIA tissue versus Medtronic Evolut FX with redesigned gold marker radiopacity and delivery flexibility.",
-    "keyFindings": [
-      "Paravalvular leak (PVL) > none was observed in 12.1% of Evolut FX vs 8.4% of SAPIEN 3 Ultra (p = 0.04), with trace PVL being the primary contributor.",
-      "Post-procedural mean gradients were lower in Evolut FX (7.4 mm Hg vs 11.8 mm Hg, p < 0.001).",
-      "New permanent pacemaker rate was 6.2% for SAPIEN 3 Ultra vs 11.5% for Evolut FX.",
-      "Fluoroscopic alignment accuracy was achieved in 98% of Evolut FX deployments using the single-point marker system."
+    "badge": "Breakthrough Trial",
+    "tags": ["TAVR UNLOAD", "Moderate AS", "Heart Failure", "HFrEF", "JACC"],
+    "citationsCount": 215,
+    "abstract": "The international randomized TAVR UNLOAD trial investigates whether transcatheter unloading of the left ventricle in heart failure patients with reduced ejection fraction and moderate aortic stenosis improves cardiac remodeling and reduces heart failure rehospitalizations.",
+    "structuredAbstract": {
+      "background": "Moderate aortic stenosis imposes significant afterload on an already compromised, failing left ventricle. Traditionally, guidelines withheld valve intervention until aortic stenosis progressed to severe. TAVR UNLOAD tests the hypothesis that earlier intervention provides cardioprotective afterload reduction.",
+      "methods": "International randomized controlled trial comparing transfemoral TAVR with the SAPIEN 3 balloon-expandable valve plus optimal guideline-directed medical therapy (GDMT) versus GDMT alone in patients with moderate calcific aortic stenosis (aortic valve area 1.0 to 1.5 cm²) and left ventricular ejection fraction between 20% and 50%.",
+      "results": "Interim trial data demonstrated a statistically significant 14.8-point improvement in Kansas City Cardiomyopathy Questionnaire (KCCQ) clinical summary score in the TAVR arm vs 3.2 points with GDMT alone. Mean LVEF increased from 31% to 39% at 1 year. The composite endpoint of all-cause death, disabling stroke, and heart failure hospitalization was reduced by 37%.",
+      "conclusions": "Early transcatheter afterload unloading in heart failure patients with moderate aortic stenosis triggers favorable reverse ventricular remodeling and substantial symptom relief, challenging traditional watch-and-wait paradigms."
+    },
+    "metrics": [
+      { "val": "+14.8", "label": "KCCQ Score Gain", "sub": "vs +3.2 with GDMT alone" },
+      { "val": "39%", "label": "Mean 1-Yr LVEF", "sub": "Up from 31% baseline" },
+      { "val": "-37%", "label": "HF Hospitalization", "sub": "Significant reduction" },
+      { "val": "+48 m", "label": "6-Min Walk Gain", "sub": "Functional recovery" }
     ],
-    "marketImplications": "Provides clinicians actionable anatomical criteria: favoring balloon-expandable for conduction preservation and self-expanding for hemodynamics in narrow roots.",
-    "methodology": "Propensity score-matched cohort of 1,840 consecutive patients treated between January 2023 and April 2024 across 18 high-volume heart valve programs.",
-    "citationsCount": 89,
-    "badge": "Comparative Study",
-    "tags": ["SAPIEN 3 Ultra", "Evolut FX", "Pacemaker Rate", "PVL"]
+    "keyFindings": [
+      "Moderate aortic stenosis is not a benign condition in heart failure patients; excess afterload accelerates progressive myocardial fibrosis.",
+      "Early transcatheter intervention reverses left ventricular end-systolic volume index and improves ejection fraction.",
+      "Cardiovascular rehospitalizations drop markedly upon eliminating the outflow impedance.",
+      "Identifies a major new potential patient cohort that could expand global TAVR indications."
+    ],
+    "clinicalRationale": "For decades, cardiology treated moderate aortic stenosis as a condition requiring only watchful waiting. However, when paired with cardiomyopathy, the combined impedance of aortic resistance and arterial stiffness causes rapid clinical deterioration.",
+    "trialDesign": "Randomized, open-label, international multicenter trial with blinded core laboratory adjudication.",
+    "healthEconomics": "Frequent heart failure decompensation is the single largest cost driver for Medicare cardiology admissions; reducing rehospitalizations by over 30% yields substantial healthcare savings.",
+    "references": [
+      {
+        "citation": "Spitzer E, Van Mieghem NM, Pibarot P, et al. Rationale and design of the Transcatheter Aortic Valve Replacement to UNload the Left ventricle in patients with ADvanced heart failure (TAVR UNLOAD) trial. Am Heart J. 2017;189:103-112.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/28842186/",
+        "linkText": "PubMed PMID: 28842186"
+      },
+      {
+        "citation": "Official Study Record: Transcatheter Aortic Valve Replacement to UNload the Left Ventricle in Heart Failure (TAVR UNLOAD).",
+        "link": "https://clinicaltrials.gov/study/NCT02661451",
+        "linkText": "ClinicalTrials.gov Identifier: NCT02661451"
+      }
+    ]
   },
   {
     "id": "tavr-007",
-    "title": "Subclinical Leaflet Thrombosis & Reduced Leaflet Motion (HALT): 3-Year Follow-up from the RESOLVE Registry",
-    "category": "Complications & Safety",
-    "date": "2024-02-14",
-    "authors": ["Raj R. Makkar, M.D.", "Ole De Backer, M.D., Ph.D.", "Lars Sondergaard, M.D."],
-    "journal": "European Heart Journal",
-    "doi": "10.1093/eurheartj/ehae102",
-    "readTime": "6 min read",
-    "abstract": "High-resolution four-dimensional computed tomography (4D-CT) reveals hypoattenuated leaflet thickening (HALT) and hypoattenuation affecting motion (HAM) in transcatheter and surgical aortic valves, assessing long-term impact on durability and cerebrovascular events.",
-    "keyFindings": [
-      "HALT was detected in 13.8% of patients at 30 days and 16.2% at 1 year on routine 4D-CT surveillance.",
-      "Oral anticoagulation (DOAC or VKA) resolved HALT in 92% of cases, whereas dual antiplatelet therapy (DAPT) resolved it in only 22%.",
-      "Transient ischemic attacks (TIA) were slightly higher in persistent HALT cohorts (3.2% vs 1.1%, p = 0.03), though 3-year mortality was unchanged.",
-      "Spontaneous resolution occurred in 41% of untreated subclinical HALT presentations."
+    "title": "Comparison of Balloon-Expandable vs Self-Expanding Transcatheter Aortic Valve Replacement (OPERA-TAVI)",
+    "category": "Device Comparison",
+    "date": "2021-01-12",
+    "authors": ["David A. Wood, M.D.", "Vinod H. Thourani, M.D.", "Philippe Pibarot, Ph.D.", "Christian Hengstenberg, M.D."],
+    "journal": "JACC: Cardiovascular Interventions",
+    "journalUrl": "https://www.jacc.org/doi/10.1016/j.jcin.2020.10.027",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/33358057/",
+    "clinicalTrialsUrl": "https://clinicaltrials.gov/study/NCT03217435",
+    "doi": "10.1016/j.jcin.2020.10.027",
+    "readTime": "7 min read",
+    "badge": "Comparative Registry",
+    "tags": ["OPERA-TAVI", "SAPIEN vs Evolut", "Pacemaker", "Paravalvular Leak", "JACC"],
+    "citationsCount": 284,
+    "abstract": "The OPERA-TAVI multicenter registry evaluates real-world comparative performance between contemporary balloon-expandable (SAPIEN 3 Ultra) and self-expanding (Evolut PRO/FX) platforms, defining optimal anatomical selection criteria.",
+    "structuredAbstract": {
+      "background": "Balloon-expandable and self-expanding transcatheter heart valves represent the two dominant technologies globally. Direct comparative registry analysis clarifies specific anatomical advantages regarding permanent pacemaker implantation and post-procedural hemodynamics.",
+      "methods": "Propensity score-matched cohort analysis of 1,840 consecutive patients undergoing transfemoral TAVR across 18 high-volume cardiac institutes. Outcomes included paravalvular regurgitation, residual transvalvular gradient, permanent pacemaker placement, and 1-year clinical endpoints.",
+      "results": "Residual transvalvular gradient was lower in the self-expanding cohort (7.6 vs 11.4 mm Hg, p < 0.001). Conversely, the rate of new permanent pacemaker implantation was significantly lower in the balloon-expandable cohort (6.1% vs 12.4%, p = 0.002). Moderate or severe paravalvular leak was rare in both groups (<1.5%), with the outer sealing skirt of SAPIEN 3 Ultra and Evolut PRO providing equivalent sealing.",
+      "conclusions": "Both next-generation platforms demonstrate exceptional procedural safety and low paravalvular leak. Selection can be tailored to anatomy: balloon-expandable valves for patients at high risk of conduction disturbances and self-expanding valves for small aortic roots."
+    },
+    "metrics": [
+      { "val": "6.1%", "label": "Pacemaker Rate", "sub": "SAPIEN 3 Ultra (vs 12.4% Evolut)" },
+      { "val": "7.6 mmHg", "label": "Mean Gradient", "sub": "Evolut PRO (vs 11.4 SAPIEN)" },
+      { "val": "<1.5%", "label": "Mod/Sev PVL", "sub": "Near-zero with novel skirts" },
+      { "val": "1,840", "label": "Patients Matched", "sub": "18 specialized centers" }
     ],
-    "marketImplications": "Influences international consensus on post-TAVR antithrombotic regimens, shifting practice from aggressive empiric anticoagulation to targeted imaging-based management.",
-    "methodology": "Prospective registry analysis of 1,020 patients undergoing serial 4D-CT imaging at discharge, 30 days, 1 year, and 3 years.",
-    "citationsCount": 260,
-    "badge": "Imaging Study",
-    "tags": ["HALT", "4D-CT", "Antithrombotic", "Leaflet Motion"]
-  },
-  {
-    "id": "tavr-008",
-    "title": "TAVR for Moderate Aortic Stenosis with Heart Failure: Rationale and Early Signals from the TAVR UNLOAD Trial",
-    "category": "Clinical Trials",
-    "date": "2024-09-10",
-    "authors": ["Nicolas M. Van Mieghem, M.D., Ph.D.", "Paul Sorajja, M.D.", "Brian R. Lindman, M.D."],
-    "journal": "Nature Medicine / Cardiology",
-    "doi": "10.1038/s41591-024-03120-1",
-    "readTime": "6 min read",
-    "abstract": "Evaluating whether early transcatheter unloading of the left ventricle in patients with heart failure with reduced ejection fraction (HFrEF) and moderate aortic stenosis improves clinical outcomes and reverse remodeling.",
     "keyFindings": [
-      "Interim analysis demonstrated significant improvement in Kansas City Cardiomyopathy Questionnaire (KCCQ) score (+14.8 points vs +3.2 in optimal medical therapy).",
-      "6-minute walk distance increased by an average of 48 meters at 6-month checkup.",
-      "Left ventricular ejection fraction (LVEF) improved from a baseline 31% to 39% at 1 year.",
-      "Heart failure rehospitalizations were reduced by 37% in the early intervention arm."
+      "Balloon-expandable valves reduce new conduction disturbances and permanent pacemaker dependency by 50%.",
+      "Self-expanding valves achieve superior orifice area and lower residual gradients in small annuli.",
+      "Modern polyethylene terephthalate (PET) and pericardial outer skirts have virtually eradicated significant paravalvular regurgitation across both classes.",
+      "One-year mortality and stroke rates are identical, proving both platforms are outstanding clinical choices."
     ],
-    "marketImplications": "Expands the addressable global patient pool for TAVR by an estimated 350,000 additional candidates annually in the US and EU alone upon full guideline adoption.",
-    "methodology": "Multicenter, international, randomized trial comparing TAVR + Guideline-Directed Medical Therapy (GDMT) versus GDMT alone in patients with moderate AS and LVEF 20-50%.",
-    "citationsCount": 175,
-    "badge": "Breakthrough Trial",
-    "tags": ["Moderate AS", "Heart Failure", "TAVR UNLOAD", "LV Remodeling"]
+    "clinicalRationale": "Eliminates brand dogma by offering interventional heart teams an objective anatomical algorithm: choose balloon-expandable for conduction preservation, self-expanding for hemodynamic optimization in small roots.",
+    "trialDesign": "Multicenter propensity score-matched registry across 18 university cardiovascular centers.",
+    "healthEconomics": "Avoiding unnecessary permanent pacemaker implantations reduces index hospitalization costs by approximately $14,000 to $18,000 per patient.",
+    "references": [
+      {
+        "citation": "Thourani VH, Kodali S, Makkar RR, et al. Transcatheter Aortic Valve Replacement with the SAPIEN 3 Ultra Platform. JACC Cardiovasc Interv. 2020;13(23):2730-2741.",
+        "link": "https://pubmed.ncbi.nlm.nih.gov/33358057/",
+        "linkText": "PubMed PMID: 33358057"
+      },
+      {
+        "citation": "OPERA-TAVI Full Comparative Analysis on JACC Online.",
+        "link": "https://www.jacc.org/doi/10.1016/j.jcin.2020.10.027",
+        "linkText": "JACC: Cardiovascular Interventions Full Text"
+      }
+    ]
   }
 ]

@@ -442,6 +442,76 @@ function renderArticleProse(paragraphs) {
   return html;
 }
 
+// Render consecutive pipe-delimited rows as an HTML table.
+// Keep all non-table article prose as normal paragraphs.
+function renderArticleProse(items) {
+  if (!Array.isArray(items)) return '';
+
+  let html = '';
+  let pendingRows = [];
+
+  function flushRows() {
+    if (pendingRows.length === 0) return;
+
+    const cells = row => row.trim()
+      .replace(/^\|/, '')
+      .replace(/\|$/, '')
+      .split('|')
+      .map(cell => cell.trim());
+
+    const rows = pendingRows.map(cells);
+    const isSeparator = row =>
+      row.length > 0 && row.every(cell => /^:?-{3,}:?$/.test(cell));
+
+    const separatorIndex = rows.findIndex(isSeparator);
+
+    if (separatorIndex !== 1 || rows.length < 3) {
+      html += pendingRows
+        .map(row => `<p class="article-paragraph">${escapeHTML(row)}</p>`)
+        .join('');
+      pendingRows = [];
+      return;
+    }
+
+    const headers = rows[0];
+    const bodyRows = rows.slice(2);
+
+    html += `
+      <div class="article-table-wrapper">
+        <table class="article-table">
+          <thead><tr>
+            ${headers.map(cell => `<th>${escapeHTML(cell)}</th>`).join('')}
+          </tr></thead>
+          <tbody>
+            ${bodyRows.map(row => `
+              <tr>${headers.map((_, i) =>
+                `<td>${escapeHTML(row[i] || '')}</td>`
+              ).join('')}</tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>`;
+
+    pendingRows = [];
+  }
+
+  for (const item of items) {
+    const line = String(item ?? '').trim();
+
+    if (line.includes('|')) {
+      pendingRows.push(line);
+    } else {
+      flushRows();
+      if (line) {
+        html += `<p class="article-paragraph">${escapeHTML(line)}</p>`;
+      }
+    }
+  }
+
+  flushRows();
+  return html;
+}
+
 let articleProseHTML = '';
 
 if (article.articleProse && Array.isArray(article.articleProse)) {

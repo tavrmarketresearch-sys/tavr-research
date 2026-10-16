@@ -306,7 +306,7 @@
           <span>•</span>
           <span>⏱️ ${article.readTime}</span>
           <span>•</span>
-          <span>📊 ${article.citationsCount || 0} Citations</span>
+          <span>📊 ${article.recentViewCount || 0} Recent views</span>
         </div>
 
         <!-- Verified Real Clinical Links Bar -->
@@ -420,8 +420,8 @@
         return new Date(b.date) - new Date(a.date);
       } else if (state.sortBy === 'oldest') {
         return new Date(a.date) - new Date(b.date);
-      } else if (state.sortBy === 'citations') {
-        return (b.citationsCount || 0) - (a.citationsCount || 0);
+      } else if (state.sortBy === 'Recent views') {
+        return (b.recentViewCount || 0) - (a.recentViewCount || 0);
       } else if (state.sortBy === 'title') {
         return a.title.localeCompare(b.title);
       }
@@ -485,8 +485,8 @@
           <p class="card-authors">${escapeHTML(authorsFormatted)}</p>
 
           <div class="card-footer">
-            <span class="citation-badge" title="Citations count">
-              📊 ${article.citationsCount || 0} citations
+            <span class="citation-badge" title="Recent views count">
+              📊 ${article.recentViewCount || 0} Recent views
             </span>
             <span class="read-btn">
               Read Full Study →
@@ -561,7 +561,7 @@
       abstract,
       keyFindings: findings.length ? findings : ['Preliminary clinical observations reported.'],
       healthEconomics: implications || 'Broadening clinical indications.',
-      citationsCount: 0,
+      recentViewCount: 0,
       badge: 'User Contribution',
       tags: tags.length ? tags : ['TAVR', 'Cardiology']
     };
@@ -586,6 +586,12 @@
 
     if (elements.backToHubBtn) {
       elements.backToHubBtn.addEventListener('click', () => navigateTo('#/'));
+    }
+
+if (document.getElementById('logoBrand')) {
+      document.getElementById('logoBrand').addEventListener('click', () => {
+        navigateTo('#/');
+      });
     }
 
     if (elements.themeToggleBtn) {
@@ -620,6 +626,33 @@
           showToast('Citation copied to clipboard!');
         });
       });
+
+	// Category Filter Chips Listener
+    if (elements.categoryChipsContainer) {
+      elements.categoryChipsContainer.addEventListener('click', (e) => {
+        const chip = e.target.closest('.filter-chip');
+        if (!chip) return;
+        
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        
+        state.selectedCategory = chip.getAttribute('data-category');
+        renderArticles();
+      });
+    }
+
+    // Reset filter button listener
+    if (elements.resetFilterBtn) {
+      elements.resetFilterBtn.addEventListener('click', () => {
+        state.selectedCategory = 'all';
+        state.searchQuery = '';
+        if (elements.searchInput) elements.searchInput.value = '';
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          c.classList.toggle('active', c.getAttribute('data-category') === 'all');
+        });
+        renderArticles();
+      });
+    }
     }
 
     if (elements.addArticleBtn) elements.addArticleBtn.addEventListener('click', openAddModal);

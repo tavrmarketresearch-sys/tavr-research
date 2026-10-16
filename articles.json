@@ -1,4 +1,63 @@
 [
+{
+    "id": "tavr-durability-full-2026",
+    "title": "TAVR Durability Data: What It Actually Says",
+    "category": "Durability & Outcomes",
+    "date": "2026-10-15",
+    "authors": ["Cardiovascular Clinical Strategy Group", "Market Intelligence Advisory Board"],
+    "journal": "TAVR Strategic Research Intelligence",
+    "doi": "10.1016/tavr.strategy.2026.10",
+    "readTime": "28 min read",
+    "badge": "Full Strategic Intelligence Report",
+    "tags": [
+      "Durability",
+      "Evolut",
+      "Sapien",
+      "PARTNER 2A",
+      "P2S3i",
+      "NOTION",
+      "SMART",
+      "PVL",
+      "HALT",
+      "Valve-in-Valve"
+    ],
+    "citationsCount": 142,
+    "abstract": "A comprehensive 15-page intelligence evaluation dissecting ten-year TAVR datasets, five distinct definitions of valve durability, flow mechanics, subclinical leaflet thrombosis, and exertional functional capacity.",
+    "structuredAbstract": {
+      "background": "Ten-year TAVR datasets published recently are often interpreted as proof that durability questions are settled. In reality, they address narrower propositions, with competitive implications favoring Medtronic Evolut over Edwards Sapien in constrained anatomies.",
+      "methods": "Systematic evaluation of randomized controlled trial datasets (PARTNER 2A, NOTION, SMART), propensity-matched registries (P2S3i), 4D-CT imaging substudies, and post-procedural antithrombotic regimens.",
+      "results": "Mean resting gradients remained essentially static across valve generations, whereas sealing and vascular access improved dramatically. Within cohorts, paravalvular leak correlates directly with mortality. In constrained small annuli, hemodynamic spreads broaden significantly, while subclinical leaflet thrombosis tracks frame underexpansion.",
+      "conclusions": "Evaluating valve durability solely on resting supine gradients compared against another prosthesis mischaracterizes clinical performance. The true objective is restoring normal laminar flow and functional exertion capacity."
+    },
+    "metrics": [
+      { "val": "86.1%", "label": "10-Yr Mortality (P2A)", "sub": "Sapien XT vs 82.8% SAVR" },
+      { "val": "10.5%", "label": "XT Moderate+ PVL", "sub": "Historical benchmark vs 0% surgery" },
+      { "val": "1.5%", "label": "NOTION Severe SVD", "sub": "vs 10.0% surgical at 10 years" },
+      { "val": "16.1 mmHg", "label": "SMART 2-Yr Gradient", "sub": "Sapien small annulus cohort" }
+    ],
+    "keyFindings": [
+      "Randomized ten-year data is limited to discontinued platforms or small cohorts.",
+      "Paravalvular leak predicts within-cohort mortality, whereas resting mean gradient has a weaker mortality correlation in average anatomy.",
+      "Gradient relevance scales directly with anatomical constraint, creating wide performance gaps in small annuli.",
+      "Leaflet thrombosis (HALT) tracks frame underexpansion and canting, and is often treated out of post-randomization datasets via oral anticoagulation.",
+      "Resting supine hemodynamics miss exertional capacity; fixed-orifice prostheses cause pressure drops under rising cardiac output."
+    ],
+    "clinicalRationale": "The full strategic analysis explores five distinct dimensions of durability: hemodynamics, sealing, procedural safety, structural degeneration, and lifetime management. It evaluates generational transitions from Sapien XT to Sapien 3, the NOTION ten-year low-risk dataset, and the specific mechanics of frame underexpansion in small annuli and valve-in-valve procedures.",
+    "trialDesign": "In-depth synthesis of multi-center randomized controlled trials, core-lab adjudicated echocardiographic registries, and 4D computed tomography imaging protocols.",
+    "healthEconomics": "Minimizing patient-prosthesis mismatch and subclinical leaflet thrombosis optimizes long-term hospital resource utilization and prevents heart failure readmissions.",
+    "references": [
+      {
+        "citation": "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients. N Engl J Med. 2019;380(18):1695-1705.",
+        "link": "https://www.nejm.org/doi/full/10.1056/NEJMoa1902141",
+        "linkText": "PARTNER 3 Landmark Paper"
+      },
+      {
+        "citation": "Jorgensen TH, Sondergaard L, et al. Ten-Year Outcomes in Randomized Patients With Severe Aortic Stenosis Treated With Transcatheter or Surgical Aortic Valve Replacement (NOTION). Circulation. 2023.",
+        "link": "https://www.ahajournals.org/",
+        "linkText": "NOTION 10-Year Trial"
+      }
+    ]
+  },
   {
     "id": "tavr-001",
     "title": "Five-Year Outcomes of Transcatheter or Surgical Aortic-Valve Replacement in Low-Risk Patients (PARTNER 3)",

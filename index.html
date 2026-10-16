@@ -188,89 +188,11 @@
     </div>
   </article>
 
-  <!-- Add Article Modal Form -->
-  <div class="modal-backdrop" id="addArticleModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
-    <div class="modal-sheet" style="max-width: 640px;">
-      <div class="modal-header">
-        <h3 id="addModalTitle" style="font-size: 1.15rem; font-weight: 700;">Add Research Publication</h3>
-        <button class="modal-close-btn" id="closeAddModalBtn" aria-label="Close dialog">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <form id="addArticleForm">
-        <div class="modal-body" style="padding: 1.5rem;">
-          <div class="form-group">
-            <label class="form-label" for="articleTitle">Paper Title *</label>
-            <input type="text" id="articleTitle" name="articleTitle" class="form-input" placeholder="e.g. 5-Year Outcomes of Novel Transcatheter Valves" required>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="articleCategory">Category</label>
-              <select id="articleCategory" name="articleCategory" class="form-select">
-                <option value="Clinical Trials">Clinical Trials</option>
-                <option value="Durability & Outcomes">Durability & Outcomes</option>
-                <option value="Market Trends">Market Trends</option>
-                <option value="Device Comparison">Device Comparison</option>
-                <option value="Complications & Safety">Complications & Safety</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="articleJournal">Journal / Publication</label>
-              <input type="text" id="articleJournal" name="articleJournal" class="form-input" placeholder="e.g. JACC, NEJM, Circulation">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="articleAuthors">Authors (comma-separated)</label>
-            <input type="text" id="articleAuthors" name="articleAuthors" class="form-input" placeholder="e.g. Jane Doe, M.D., John Smith, Ph.D.">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="articleAbstract">Abstract & Summary *</label>
-            <textarea id="articleAbstract" name="articleAbstract" class="form-textarea" rows="3" placeholder="Summary of clinical background, objectives, and findings..." required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="articleFindings">Key Clinical Findings (one per line)</label>
-            <textarea id="articleFindings" name="articleFindings" class="form-textarea" rows="3" placeholder="Key statistic 1&#10;Key outcome 2"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="articleImplications">Market & Healthcare Implications</label>
-            <textarea id="articleImplications" name="articleImplications" class="form-textarea" rows="2" placeholder="Reimbursement, adoption impact, hospital economics..."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="articleTags">Tags (comma-separated)</label>
-            <input type="text" id="articleTags" name="articleTags" class="form-input" placeholder="e.g. TAVR, Durability, Echo, Registry">
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="tool-btn" onclick="document.getElementById('closeAddModalBtn').click()">Cancel</button>
-          <button type="submit" class="btn-primary-action">Publish Article</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Toast Notification Popup -->
-  <div class="toast" id="toast" role="status" aria-live="polite">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
-    <span id="toastText">Notification message</span>
-  </div>
-
   <!-- Footer -->
   <footer class="app-footer">
     <div class="footer-container">
       <div>
-        <strong>TAVR Research Hub</strong> &copy; 2024. Mobile-ready clinical & market research portal.
+        <strong>TAVR Research Hub</strong> &copy; 2026. TAVR clinical & market research portal.
       </div>
       <div class="footer-links">
         <a href="https://github.com/tavrmarketresearch-sys/tavr-research" target="_blank" rel="noopener noreferrer">GitHub Repository</a>

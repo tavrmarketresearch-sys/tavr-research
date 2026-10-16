@@ -122,7 +122,7 @@
     const customArticles = JSON.parse(localStorage.getItem('tavr_custom_articles') || '[]');
     
     // Pinned Google Doc article is always at the top
-    state.articles = [PRIMARY_GDOC_ARTICLE, ...clinicalArticles, ...customArticles];
+    state.articles = [PRIMARY_FEATURED_ARTICLE, ...clinicalArticles, ...customArticles];
     
     updateBookmarkCounter();
     renderArticles();

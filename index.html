@@ -30,16 +30,6 @@
       </div>
 
       <div class="header-actions">
-        <!-- Google Docs Sync Button -->
-        <button class="tool-btn" id="syncGoogleDocsBtn" title="Sync articles from Google Docs" aria-label="Sync Google Docs">
-          <svg class="sync-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="23 4 23 10 17 10"></polyline>
-            <polyline points="1 20 1 14 7 14"></polyline>
-            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-          </svg>
-          <span class="sync-btn-label">Sync Google Docs</span>
-        </button>
-
         <!-- Bookmark Filter Toggle -->
         <button class="icon-btn" id="bookmarksFilterBtn" title="Show Bookmarked Articles" aria-label="Bookmarked Articles">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -120,7 +110,7 @@
       <!-- Category Chips Scrollbar -->
       <div class="category-scroll-container" id="categoryChipsContainer">
         <button class="filter-chip active" data-category="all">All Topics</button>
-        <button class="filter-chip" data-category="Google Docs">📑 Google Docs</button>
+        <button class="filter-chip" data-category="Clinical Strategy">Clinical Strategy</button>
         <button class="filter-chip" data-category="Clinical Trials">Clinical Trials</button>
         <button class="filter-chip" data-category="Durability & Outcomes">Durability & Outcomes</button>
         <button class="filter-chip" data-category="Market Trends">Market Trends</button>
@@ -215,12 +205,6 @@
       </div>
       <form id="addArticleForm">
         <div class="modal-body" style="padding: 1.5rem;">
-          <div class="form-group">
-            <label class="form-label" for="articleGoogleDocUrl">Google Doc Link / ID (Optional)</label>
-            <input type="url" id="articleGoogleDocUrl" name="articleGoogleDocUrl" class="form-input" placeholder="https://docs.google.com/document/d/.../edit">
-            <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.2rem; display: block;">Paste any Google Doc link to automatically enable live editing and syncing.</span>
-          </div>
-
           <div class="form-group">
             <label class="form-label" for="articleTitle">Paper Title *</label>
             <input type="text" id="articleTitle" name="articleTitle" class="form-input" placeholder="e.g. 5-Year Outcomes of Novel Transcatheter Valves" required>

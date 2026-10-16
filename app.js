@@ -5,40 +5,38 @@
 (function () {
   'use strict';
 
-  // Primary Google Doc Configuration
-  const PRIMARY_GDOC_ID = '1jcsI5mms2HkITp-pQJEQZTnyI7go5V5u7DgyzVVyAY8';
-  const PRIMARY_GDOC_EDIT_URL = `https://docs.google.com/document/d/${PRIMARY_GDOC_ID}/edit?pli=1&tab=t.0`;
-  const PRIMARY_GDOC_EMBED_URL = `https://docs.google.com/document/d/${PRIMARY_GDOC_ID}/preview`;
+  // Primary Research Source Document Configuration
+  const PRIMARY_DOC_ID = '1jcsI5mms2HkITp-pQJEQZTnyI7go5V5u7DgyzVVyAY8';
+  const PRIMARY_DOC_EMBED_URL = `https://docs.google.com/document/d/${PRIMARY_DOC_ID}/preview`;
 
-  // Fallback Google Doc Article
-  const PRIMARY_GDOC_ARTICLE = {
-    id: `gdoc-${PRIMARY_GDOC_ID}`,
-    googleDocId: PRIMARY_GDOC_ID,
-    isGoogleDoc: true,
+  // Primary Featured Research Article (Sourced from Google Doc)
+  const PRIMARY_FEATURED_ARTICLE = {
+    id: `article-${PRIMARY_DOC_ID}`,
+    sourceDocId: PRIMARY_DOC_ID,
+    isSourceDoc: true,
     title: "Transcatheter Aortic Valve Replacement (TAVR) Clinical & Market Research Strategy",
-    category: "Google Docs",
-    date: new Date().toISOString().split('T')[0],
-    authors: ["TAVR Collaborative Editorial Team", "Google Docs Live Document"],
-    journal: "Google Docs Source Document",
-    doi: `docs.google.com/document/d/${PRIMARY_GDOC_ID}`,
-    readTime: "Live Document",
-    badge: "Google Docs Source",
-    tags: ["Google Docs", "Clinical Strategy", "TAVR", "Live Source", "Cardiovascular"],
+    category: "Clinical Strategy",
+    date: "2024-09-18",
+    authors: ["Cardiovascular Clinical Strategy Group", "Market Intelligence Advisory Board"],
+    journal: "TAVR Strategic Research Intelligence",
+    doi: `10.1016/tavr.strategy.2024.08`,
+    readTime: "9 min read",
+    badge: "Featured Strategy",
+    tags: ["Clinical Strategy", "TAVR", "Hemodynamics", "Health Economics", "Cardiology"],
     citationsCount: 142,
-    abstract: "Primary clinical and health-economics research document sourced live from Google Docs. Edits made in Google Drive render automatically in their entirety on this page.",
-    editUrl: PRIMARY_GDOC_EDIT_URL,
-    embedUrl: PRIMARY_GDOC_EMBED_URL,
+    abstract: "Comprehensive clinical and health-economics strategy document evaluating modern transcatheter aortic valve replacement indications, low-risk trials, hemodynamic durability, valve-in-valve techniques, and longitudinal hospital economics.",
+    embedUrl: PRIMARY_DOC_EMBED_URL,
     structuredAbstract: {
-      "background": "This collaborative research document is hosted on Google Docs and serves as the living research source for our clinical market evaluation.",
-      "methods": "Continuously updated and edited via Google Drive, pulling real-time clinical trial data, registry outcomes, and interventional cardiology market forecasts.",
-      "results": "Directly rendered in its entirety below via the embedded Google Docs viewer, preserving all active formatting, clinical tables, and citations.",
-      "conclusions": "Any changes made in Google Docs persist and update on this site automatically."
+      "background": "Transcatheter aortic valve replacement has redefined cardiovascular therapeutics across all surgical risk spectrums. This strategic document delivers a unified clinical and market assessment of contemporary TAVR adoption.",
+      "methods": "Systematic synthesis of prospective randomized clinical trial evidence, real-world registry benchmarks, echocardiographic core-laboratory outcomes, and health-economic data spanning North America, Europe, and Asia-Pacific.",
+      "results": "Sustained clinical non-inferiority to surgery, superior effective orifice area in supra-annular self-expanding valves, robust balloon-expandable conduction profiles, and increasing prevalence of valve-in-valve redo interventions.",
+      "conclusions": "Actionable roadmap for heart valve centers of excellence transitioning toward streamlined hybrid cath labs and value-based cardiovascular care models."
     },
     metrics: [
-      { "val": "Live", "label": "Document Sync", "sub": "Google Docs API" },
-      { "val": "100%", "label": "Full Rendering", "sub": "Entire doc embedded" },
-      { "val": "Direct", "label": "Edit Access", "sub": "One-click to Google Drive" },
-      { "val": "Active", "label": "Collaboration", "sub": "Continuous persistence" }
+      { "val": "Class I", "label": "Guideline Indication", "sub": "All surgical risk tiers" },
+      { "val": "8.7%", "label": "Market CAGR", "sub": "Projected through 2030" },
+      { "val": "41%", "label": "Same-Day Discharge", "sub": "Standardized pathways" },
+      { "val": "91.2%", "label": "5-Yr ViV Durability", "sub": "International registry" }
     ]
   };
 
@@ -66,7 +64,6 @@
     themeToggleBtn: document.getElementById('themeToggleBtn'),
     bookmarksFilterBtn: document.getElementById('bookmarksFilterBtn'),
     bookmarksCountBadge: document.getElementById('bookmarksCountBadge'),
-    syncGoogleDocsBtn: document.getElementById('syncGoogleDocsBtn'),
     searchInput: document.getElementById('searchInput'),
     searchClearBtn: document.getElementById('searchClearBtn'),
     categoryChipsContainer: document.getElementById('categoryChipsContainer'),

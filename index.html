@@ -13,7 +13,7 @@
 <body>
 
   <!-- App Header -->
-  <header class="app-header">
+<header class="app-header">
     <div class="header-container">
       <div class="logo-brand" id="logoBrand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <div class="logo-icon-wrapper" aria-hidden="true">
@@ -53,14 +53,12 @@
           </svg>
         </button>
 
-        <!-- Add Article Button -->
-        <button class="btn-primary-action" id="addArticleBtn" aria-label="Add Research Article">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          <span>Add Article</span>
-        </button>
+<form action="https://formspree.io/f/tavrmarketresearch@gmail.com" method="POST" id="addArticleForm">
+  <input type="text" name="title" placeholder="Article Title" required />
+  <input type="text" name="authors" placeholder="Authors" required />
+  <textarea name="abstract" placeholder="Abstract / Summary" required></textarea>
+  <button type="submit" class="btn-primary-action">Submit via Email</button>
+</form>
       </div>
     </div>
   </header>

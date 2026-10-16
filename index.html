@@ -30,6 +30,16 @@
       </div>
 
       <div class="header-actions">
+        <!-- Google Docs Sync Button -->
+        <button class="tool-btn" id="syncGoogleDocsBtn" title="Sync articles from Google Docs" aria-label="Sync Google Docs">
+          <svg class="sync-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          <span class="sync-btn-label">Sync Google Docs</span>
+        </button>
+
         <!-- Bookmark Filter Toggle -->
         <button class="icon-btn" id="bookmarksFilterBtn" title="Show Bookmarked Articles" aria-label="Bookmarked Articles">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -108,6 +118,7 @@
     <!-- Category Chips Scrollbar -->
     <div class="category-scroll-container" id="categoryChipsContainer">
       <button class="filter-chip active" data-category="all">All Topics</button>
+      <button class="filter-chip" data-category="Google Docs">📑 Google Docs</button>
       <button class="filter-chip" data-category="Clinical Trials">Clinical Trials</button>
       <button class="filter-chip" data-category="Durability & Outcomes">Durability & Outcomes</button>
       <button class="filter-chip" data-category="Market Trends">Market Trends</button>
@@ -167,6 +178,14 @@
             </svg>
             <span>Copy Citation</span>
           </button>
+          <a href="#" class="tool-btn" id="editInGoogleDocsBtn" target="_blank" rel="noopener noreferrer" style="display: none; color: var(--primary); font-weight: 600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>Edit in Google Docs</span>
+          </a>
         </div>
 
         <button class="modal-close-btn" id="modalCloseBtn" title="Close reader" aria-label="Close reader">
@@ -177,80 +196,113 @@
         </button>
       </div>
 
+      <!-- Mode Switch Tabs (visible for Google Doc articles) -->
+      <div class="modal-tabs-bar" id="modalTabsBar" style="display: none;">
+        <button class="modal-tab-btn active" id="tabSummaryBtn">Analysis & Summary</button>
+        <button class="modal-tab-btn" id="tabLiveDocBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Live Google Doc Viewer
+        </button>
+      </div>
+
       <!-- Modal Body Content -->
       <div class="modal-body">
-        <div class="modal-category-row">
-          <span class="badge-tag" id="modalCategory">Category</span>
-          <span class="badge-tag" id="modalBadge" style="background: var(--bg-surface-secondary); color: var(--text-muted);">Badge</span>
+        <div id="modalSummaryView">
+          <div class="modal-category-row">
+            <span class="badge-tag" id="modalCategory">Category</span>
+            <span class="badge-tag" id="modalBadge" style="background: var(--bg-surface-secondary); color: var(--text-muted);">Badge</span>
+          </div>
+
+          <h1 class="modal-title" id="modalTitle">Article Title</h1>
+
+          <div class="modal-meta-grid">
+            <div><span class="meta-row-label">Journal: </span><span class="meta-row-val" id="modalJournal">-</span></div>
+            <div><span class="meta-row-label">Published: </span><span class="meta-row-val" id="modalDate">-</span></div>
+            <div><span class="meta-row-label">Estimated Read: </span><span class="meta-row-val" id="modalReadTime">-</span></div>
+            <div><span class="meta-row-label">Impact Metric: </span><span class="meta-row-val" id="modalCitations">-</span></div>
+            <div style="grid-column: 1 / -1;"><span class="meta-row-label">Authors: </span><span class="meta-row-val" id="modalAuthors">-</span></div>
+            <div style="grid-column: 1 / -1;">
+              <span class="meta-row-label">DOI / Source: </span>
+              <a href="#" id="modalDoi" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">-</a>
+            </div>
+          </div>
+
+          <!-- Abstract -->
+          <div class="modal-section">
+            <h2 class="modal-section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              Abstract & Summary
+            </h2>
+            <p class="modal-paragraph" id="modalAbstract"></p>
+          </div>
+
+          <!-- Key Findings -->
+          <div class="modal-section">
+            <h2 class="modal-section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              Key Clinical & Technical Findings
+            </h2>
+            <ul class="findings-list" id="modalFindings"></ul>
+          </div>
+
+          <!-- Market & Clinical Implications -->
+          <div class="modal-section">
+            <h2 class="modal-section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              Market & Healthcare Implications
+            </h2>
+            <div class="implications-box">
+              <p id="modalImplications"></p>
+            </div>
+          </div>
+
+          <!-- Methodology -->
+          <div class="modal-section">
+            <h2 class="modal-section-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Study Methodology & Dataset
+            </h2>
+            <p class="modal-paragraph" id="modalMethodology"></p>
+          </div>
+
+          <!-- Tags -->
+          <div class="modal-tags" id="modalTags"></div>
         </div>
 
-        <h1 class="modal-title" id="modalTitle">Article Title</h1>
-
-        <div class="modal-meta-grid">
-          <div><span class="meta-row-label">Journal: </span><span class="meta-row-val" id="modalJournal">-</span></div>
-          <div><span class="meta-row-label">Published: </span><span class="meta-row-val" id="modalDate">-</span></div>
-          <div><span class="meta-row-label">Estimated Read: </span><span class="meta-row-val" id="modalReadTime">-</span></div>
-          <div><span class="meta-row-label">Impact Metric: </span><span class="meta-row-val" id="modalCitations">-</span></div>
-          <div style="grid-column: 1 / -1;"><span class="meta-row-label">Authors: </span><span class="meta-row-val" id="modalAuthors">-</span></div>
-          <div style="grid-column: 1 / -1;">
-            <span class="meta-row-label">DOI: </span>
-            <a href="#" id="modalDoi" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">-</a>
+        <!-- Live Google Doc Viewer Tab Container -->
+        <div id="modalDocEmbedView" style="display: none;">
+          <div class="gdoc-embed-banner">
+            <div class="gdoc-banner-info">
+              <span class="badge-tag badge-trials" style="background:#e0f2fe; color:#0369a1;">Live Google Doc</span>
+              <span>Direct interactive preview synced with your Google Drive document.</span>
+            </div>
+            <a href="#" id="gdocExternalLink" target="_blank" rel="noopener noreferrer" class="btn-primary-action" style="padding: 0.35rem 0.85rem; font-size: 0.775rem;">
+              <span>Open in Google Docs ↗</span>
+            </a>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe id="modalDocIframe" src="" title="Live Google Document" allow="autoplay; clipboard-write"></iframe>
           </div>
         </div>
-
-        <!-- Abstract -->
-        <div class="modal-section">
-          <h2 class="modal-section-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-            Abstract & Summary
-          </h2>
-          <p class="modal-paragraph" id="modalAbstract"></p>
-        </div>
-
-        <!-- Key Findings -->
-        <div class="modal-section">
-          <h2 class="modal-section-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-            Key Clinical & Technical Findings
-          </h2>
-          <ul class="findings-list" id="modalFindings"></ul>
-        </div>
-
-        <!-- Market & Clinical Implications -->
-        <div class="modal-section">
-          <h2 class="modal-section-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
-            Market & Healthcare Implications
-          </h2>
-          <div class="implications-box">
-            <p id="modalImplications"></p>
-          </div>
-        </div>
-
-        <!-- Methodology -->
-        <div class="modal-section">
-          <h2 class="modal-section-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            Study Methodology & Dataset
-          </h2>
-          <p class="modal-paragraph" id="modalMethodology"></p>
-        </div>
-
-        <!-- Tags -->
-        <div class="modal-tags" id="modalTags"></div>
       </div>
 
       <!-- Modal Footer -->
@@ -280,6 +332,12 @@
       </div>
       <form id="addArticleForm">
         <div class="modal-body" style="padding: 1.5rem;">
+          <div class="form-group">
+            <label class="form-label" for="articleGoogleDocUrl">Google Doc Link / ID (Optional)</label>
+            <input type="url" id="articleGoogleDocUrl" name="articleGoogleDocUrl" class="form-input" placeholder="https://docs.google.com/document/d/.../edit">
+            <span style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.2rem; display: block;">Paste any Google Doc link to automatically enable live editing and syncing.</span>
+          </div>
+
           <div class="form-group">
             <label class="form-label" for="articleTitle">Paper Title *</label>
             <input type="text" id="articleTitle" name="articleTitle" class="form-input" placeholder="e.g. 5-Year Outcomes of Novel Transcatheter Valves" required>

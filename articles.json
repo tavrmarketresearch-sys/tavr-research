@@ -3,7 +3,7 @@
     "id": "tavr-durability-full-2026",
     "title": "TAVR Durability Data: What It Actually Says",
     "category": "Durability & Outcomes",
-    "date": "2026-10-15",
+    "date": "2026-10-19",
     "authors": ["Cardiovascular Clinical Strategy Group", "Market Intelligence Advisory Board"],
     "journal": "TAVR Strategic Research Intelligence",
     "doi": "10.1016/tavr.strategy.2026.10",
@@ -19,7 +19,6 @@
       "conclusions": "Evaluating valve durability solely on resting supine gradients compared against another prosthesis mischaracterizes clinical performance. The true objective is restoring normal laminar flow and functional exertion capacity."
     },
     "metrics": [
-      { "val": "86.1%", "label": "10-Yr Mortality (P2A)", "sub": "Sapien XT vs 82.8% SAVR" },
       { "val": "10.5%", "label": "XT Moderate+ PVL", "sub": "Historical benchmark" },
       { "val": "1.5%", "label": "NOTION Severe SVD", "sub": "vs 10.0% surgical at 10 years" },
       { "val": "16.1 mmHg", "label": "SMART 2-Yr Gradient", "sub": "Sapien small annulus cohort" }
@@ -42,7 +41,7 @@
     "The favorable comparison everyone quotes is P2S3i, which is not randomized: a Sapien 3 registry propensity-matched to PARTNER 2A's surgical arm.",
 "Outcome at 10 years",
 "| Outcome | PARTNER 2A (Sapien XT, randomized) | P2S3i (Sapien 3, matched registry) |",
-"|:--|:--|:--|",
+"|:---|:---|:---|",
 "| Patients analyzed | 974 TAVI / 936 SAVR | 783 per arm |",
 "| Mean age / STS | 82 y / 5.8% | 82 y / 5.5% |",
 "| All-cause mortality | 86.1% vs 82.8% (HR 1.13, 1.02–1.25) | 83.4% vs 82.3% (HR 1.01, 0.91–1.13) |",

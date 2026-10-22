@@ -267,20 +267,29 @@ function renderArticleProse(paragraphs) {
   // --------------------------------------------------------------------------
   // Routing: Home Grid View vs Dedicated Article Page View
   // --------------------------------------------------------------------------
-  function navigateTo(hash) {
-    window.location.hash = hash;
+function navigateTo(path) {
+  // Support legacy calls while transitioning to clean URLs.
+  if (path.startsWith('#/')) {
+    path = path.slice(1);
   }
 
-  function handleRoute() {
-    const hash = window.location.hash || '#/';
+  window.history.pushState({}, '', path);
+  handleRoute();
+}
 
-    if (hash.startsWith('#/article/')) {
-      const articleId = hash.replace('#/article/', '').trim();
-      showArticlePage(articleId);
-    } else {
-      showHomeView();
-    }
+function handleRoute() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const articleMatch = path.match(/^\/article\/([^/]+)$/);
+
+  if (articleMatch) {
+    const articleId = decodeURIComponent(articleMatch[1]);
+    showArticlePage(articleId);
+  } else if (path === '/') {
+    showHomeView();
+  } else {
+    showHomeView();
   }
+}
 
   function showHomeView() {
     state.activeArticleId = null;
@@ -310,6 +319,31 @@ function renderArticleProse(paragraphs) {
   // --------------------------------------------------------------------------
   function renderArticleContent(article) {
     const authorsText = article.authors.join(', ');
+document.title = `${article.title} | TAVR Research`;
+
+const description = article.abstract || article.title;
+let descriptionTag = document.querySelector(
+  'meta[name="description"]'
+);
+
+if (descriptionTag) {
+  descriptionTag.setAttribute('content', description);
+}
+
+const canonicalUrl =
+  `${window.location.origin}/article/${encodeURIComponent(article.id)}`;
+
+let canonicalTag = document.querySelector(
+  'link[rel="canonical"]'
+);
+
+if (!canonicalTag) {
+  canonicalTag = document.createElement('link');
+  canonicalTag.rel = 'canonical';
+  document.head.appendChild(canonicalTag);
+}
+
+canonicalTag.href = canonicalUrl;
     const badgeCls = getBadgeClass(article.category);
 
     const pubmedBtn = article.pubmedUrl ? `
@@ -734,7 +768,7 @@ if (article.articleProse && Array.isArray(article.articleProse)) {
       card.addEventListener('click', (e) => {
         if (e.target.closest('.card-bookmark-btn')) return;
         const articleId = card.getAttribute('data-id');
-        navigateTo(`#/article/${articleId}`);
+        navigateTo(`/article/${encodeURIComponent(articleId)}`);
       });
     });
 
@@ -808,25 +842,24 @@ if (article.articleProse && Array.isArray(article.articleProse)) {
     closeAddModal();
     form.reset();
     showToast('Research article published!');
-    navigateTo(`#/article/${newArticle.id}`);
+    navigateTo(`/article/${encodeURIComponent(newArticle.id)}`);
   }
 
   // --------------------------------------------------------------------------
   // Event Listeners
   // --------------------------------------------------------------------------
   function setupEventListeners() {
-    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('popstate', handleRoute);
 
-    if (elements.backToHubBtn) {
-      elements.backToHubBtn.addEventListener('click', () => navigateTo('#/'));
-    }
+if (elements.backToHubBtn) {
+  elements.backToHubBtn.addEventListener('click', () => navigateTo('/'));
+}
 
 if (document.getElementById('logoBrand')) {
-      document.getElementById('logoBrand').addEventListener('click', () => {
-        navigateTo('#/');
-      });
-    }
-
+  document.getElementById('logoBrand').addEventListener('click', () => {
+    navigateTo('/');
+  });
+}
     if (elements.themeToggleBtn) {
       elements.themeToggleBtn.addEventListener('click', toggleTheme);
     }

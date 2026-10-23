@@ -24,18 +24,80 @@ function slug(value) {
   return encodeURIComponent(String(value));
 }
 
+
 function renderParagraphs(paragraphs = []) {
-  return paragraphs.map((paragraph) => {
-    const lines = String(paragraph).split("\n");
-    return lines
-      .map((line) => line.trim())
-      .filter(Boolean)
-      .map((line) =>
-        `<p>${escapeHTML(line)}</p>`
-      )
-      .join("\n");
-  }).join("\n");
+  const lines = paragraphs
+    .flatMap((paragraph) => String(paragraph).split("\n"))
+    .map((line) => line.trim());
+
+  const output = [];
+
+  function cells(line) {
+    return line.replace(/^\|/, "").replace(/\|$/, "")
+      .split("|").map((cell) => cell.trim());
+  }
+
+  function isSeparator(line) {
+    const parts = cells(line);
+    return parts.length > 0 &&
+      parts.every((cell) => /^:?-{3,}:?$/.test(cell));
+  }
+
+  function renderTable(headers, rows) {
+    return `
+      <div class="article-table-wrapper">
+        <table class="article-table">
+          <thead>
+            <tr>${headers.map((cell) =>
+              `<th>${escapeHTML(cell)}</th>`
+            ).join("")}</tr>
+          </thead>
+          <tbody>
+            ${rows.map((row) => `
+              <tr>${headers.map((_, index) =>
+                `<td>${escapeHTML(row[index] || "")}</td>`
+              ).join("")}</tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>`;
+  }
+
+  let i = 0;
+
+  while (i < lines.length) {
+    if (!lines[i]) {
+      i++;
+      continue;
+    }
+
+    if (lines[i].includes("|") &&
+        i + 1 < lines.length &&
+        isSeparator(lines[i + 1])) {
+      const headers = cells(lines[i]);
+      i += 2;
+      const rows = [];
+
+      while (i < lines.length &&
+             lines[i].includes("|") &&
+             lines[i]) {
+        rows.push(cells(lines[i]));
+        i++;
+      }
+
+      output.push(renderTable(headers, rows));
+      continue;
+    }
+
+    output.push(
+      `<p class="article-paragraph">${escapeHTML(lines[i])}</p>`
+    );
+    i++;
+  }
+
+  return output.join("\n");
 }
+
 
 function renderArticle(article) {
   const title = escapeHTML(article.title || "Research Article");

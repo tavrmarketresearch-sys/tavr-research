@@ -114,54 +114,108 @@ const canonical =
     .static-article .article-body p { margin: 1rem 0; }
   </style>
 </head>
+
 <body>
-  <main class="static-article">
-    <p><a href="/">← TAVR Research Hub</a></p>
-    <article>
-      <header>
-        <h1>${title}</h1>
-        <p class="article-meta">
-          ${authors}
-          ${article.date ? ` · ${escapeHTML(article.date)}` : ""}
-          ${article.journal ? ` · ${escapeHTML(article.journal)}` : ""}
-        </p>
-        <p>${description}</p>
-      </header>
+  <header class="app-header">
+    <div class="header-container">
+      <a class="logo-brand" href="/" style="text-decoration:none">
+        <div class="logo-icon-wrapper" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="brand-title">TAVR Research</span>
+          <span class="brand-subtitle">Clinical &amp; Market Hub</span>
+        </div>
+      </a>
+    </div>
+  </header>
 
-      <section>
-        <h2>Abstract</h2>
-        <p>${escapeHTML(structured.background || article.abstract || "")}</p>
-        ${structured.methods
-          ? `<h3>Methods</h3><p>${escapeHTML(structured.methods)}</p>`
-          : ""}
-        ${structured.results
-          ? `<h3>Results</h3><p>${escapeHTML(structured.results)}</p>`
-          : ""}
-        ${structured.conclusions
-          ? `<h3>Conclusions</h3><p>${escapeHTML(structured.conclusions)}</p>`
-          : ""}
-      </section>
-
-      ${findings ? `
-      <section>
-        <h2>Key Findings</h2>
-        <ul>${findings}</ul>
-      </section>` : ""}
-
-      <section class="article-body">
-        <h2>Full Article</h2>
-        ${prose || `<p>${description}</p>`}
-      </section>
-
-      ${article.doi ? `
-      <p>DOI:
-        <a href="https://doi.org/${encodeURIComponent(article.doi)}">
-          ${escapeHTML(article.doi)}
+  <article class="article-page-view">
+    <div class="article-nav-bar">
+      <div class="article-nav-container">
+        <a class="back-btn" href="/" style="text-decoration:none">
+          ← Back to Articles
         </a>
-      </p>` : ""}
-    </article>
-  </main>
+      </div>
+    </div>
+
+    <main class="article-content-wrapper">
+      <div class="full-article-header">
+        <h1 class="full-article-title">${title}</h1>
+
+        <p class="full-article-authors">${authors}</p>
+
+        <div class="full-article-meta-row">
+          ${article.journal
+            ? `<span>📖 ${escapeHTML(article.journal)}</span>`
+            : ""}
+          ${article.date
+            ? `<span>📅 ${escapeHTML(article.date)}</span>`
+            : ""}
+        </div>
+      </div>
+
+      <section class="structured-abstract-card">
+        <h2>Structured Clinical Abstract</h2>
+
+        <div class="abstract-section-heading">Background</div>
+        <p class="abstract-section-text">
+          ${escapeHTML(structured.background || article.abstract || "")}
+        </p>
+
+        ${structured.methods ? `
+          <div class="abstract-section-heading">Methods &amp; Study Design</div>
+          <p class="abstract-section-text">
+            ${escapeHTML(structured.methods)}
+          </p>
+        ` : ""}
+
+        ${structured.results ? `
+          <div class="abstract-section-heading">Results</div>
+          <p class="abstract-section-text">
+            ${escapeHTML(structured.results)}
+          </p>
+        ` : ""}
+
+        ${structured.conclusions ? `
+          <div class="abstract-section-heading">Conclusions</div>
+          <p class="abstract-section-text">
+            ${escapeHTML(structured.conclusions)}
+          </p>
+        ` : ""}
+      </section>
+
+      <section class="article-prose">
+        <h2>Full Clinical Analysis &amp; Strategic Findings</h2>
+
+        ${prose}
+
+        ${findings ? `
+          <h2>Key Trial &amp; Strategic Takeaways</h2>
+          <ul>${findings}</ul>
+        ` : ""}
+      </section>
+    </main>
+  </article>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div>
+        <strong>TAVR Research Hub</strong>
+        &copy; 2026. TAVR clinical &amp; market research portal.
+      </div>
+      <div class="footer-links">
+        <a href="/">Back to Research Hub</a>
+      </div>
+    </div>
+  </footer>
 </body>
+</html>`;
+
 </html>`;
 }
 

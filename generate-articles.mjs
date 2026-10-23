@@ -215,8 +215,6 @@ const canonical =
   </footer>
 </body>
 </html>`;
-
-</html>`;
 }
 
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });

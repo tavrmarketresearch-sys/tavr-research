@@ -42,8 +42,8 @@ function renderArticle(article) {
   const description = escapeHTML(
     article.abstract || article.title || "TAVR research article."
   );
-  const canonical =
-    `${BASE_URL}/article/${slug(article.id)}`;
+const canonical =
+  `${BASE_URL}/article/${slug(article.id)}/`;
 
   const authors = (article.authors || [])
     .map(escapeHTML)
@@ -80,11 +80,24 @@ function renderArticle(article) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${title} | TAVR Research</title>
-  <meta name="description" content="${description}">
-  <link rel="canonical" href="${canonical}">
-  <meta name="robots" content="index,follow">
-  <link rel="stylesheet" href="/styles.css">
+
+<title>${title} | TAVR Research</title>
+<meta name="description" content="${description}">
+<link rel="canonical" href="${canonical}">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TAVR Research">
+<meta property="og:title" content="${title} | TAVR Research">
+<meta property="og:description" content="${description}">
+<meta property="og:url" content="${canonical}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${title} | TAVR Research">
+<meta name="twitter:description" content="${description}">
+
+<link rel="stylesheet" href="/styles.css">
+
   <script type="application/ld+json">${jsonLD}</script>
   <style>
     .static-article {

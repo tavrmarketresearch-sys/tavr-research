@@ -76,7 +76,7 @@
   async function loadArticles() {
     let clinicalArticles = [];
     try {
-      const res = await fetch('articles.json');
+      const res = await fetch('/articles.json');
       if (res.ok) {
         clinicalArticles = await res.json();
       }
@@ -768,7 +768,7 @@ if (article.articleProse && Array.isArray(article.articleProse)) {
       card.addEventListener('click', (e) => {
         if (e.target.closest('.card-bookmark-btn')) return;
         const articleId = card.getAttribute('data-id');
-        navigateTo(`/article/${encodeURIComponent(articleId)}`);
+        navigateTo(`/article/${encodeURIComponent(articleId)}/`);
       });
     });
 
@@ -842,7 +842,7 @@ if (article.articleProse && Array.isArray(article.articleProse)) {
     closeAddModal();
     form.reset();
     showToast('Research article published!');
-    navigateTo(`/article/${encodeURIComponent(newArticle.id)}`);
+    navigateTo(`/article/${encodeURIComponent(newArticle.id)}/`);
   }
 
   // --------------------------------------------------------------------------
